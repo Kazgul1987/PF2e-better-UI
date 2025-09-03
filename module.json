@@ -18,7 +18,7 @@
     "verified": "13"
   },
   "styles": [
-    "styles/pf2e-remaster-green.css"
+    "styles/remaster.css"
   ],
   "scripts": [
     "scripts/condition-badges.js"
