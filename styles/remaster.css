@@ -5,7 +5,7 @@
 .themed.theme-light {
   --color-pf-primary: #0B4F36;
   --color-pf-primary-dark: #063324;
-  --color-pf-secondary: #0B4F36;
+  --color-pf-secondary: #002916; /* #0B4F36 */
   --primary-remaster: hsl(153, 100%, 8%);       /* #002916 */
   --primary-light-remaster: hsl(170, 96%, 19%); /* #025F50 */
   --pf2e-bg-light: #1B1B1B;
