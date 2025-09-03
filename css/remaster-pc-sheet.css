@@ -1,0 +1,30 @@
+/* Remaster PC sheet styles */
+.remaster.actor.sheet.dark-theme section.window-content .crb-style {
+  background-image: url("../css/assets/remaster-pc-sheet/header.webp"),
+    url("../css/assets/remaster-pc-sheet/background.webp") !important;
+}
+.remaster.actor.sheet.dark-theme section.window-content .crb-style aside {
+  background-image: url("../css/assets/remaster-pc-sheet/green_sidebar_top.webp"),
+    url("../css/assets/remaster-pc-sheet/green_sidebar_bottom.webp");
+}
+.remaster.actor.sheet.dark-theme section.window-content .crb-style aside .sidebar .hitpoints .hp-big .container.current-hp {
+  background-image: linear-gradient(90deg, var(--primary-remaster) 0%,
+      var(--primary-light-remaster) 50%, var(--primary-remaster) 100%);
+  background-color: var(--primary-remaster);
+}
+.remaster.actor.sheet.dark-theme section.window-content .crb-style aside .sidebar .armor-class .shield.hp {
+  background: url("../css/assets/remaster-pc-sheet/shield-blue.webp") no-repeat top center;
+}
+.remaster.actor.sheet.dark-theme section.window-content .crb-style header.char-header .char-level .level {
+  background: url("../css/assets/remaster-pc-sheet/level-badge.webp") no-repeat;
+}
+.remaster.actor.sheet.dark-theme section.window-content .crb-style nav.sheet-navigation .item:hover,
+.remaster.actor.sheet.dark-theme section.window-content .crb-style nav.sheet-navigation .item.active {
+  background-image: url("../css/assets/remaster-pc-sheet/green-nav-item.webp");
+}
+.remaster.sheet.actor.character.dark-theme section.window-content .crb-style .sheet-body .sheet-content .tab.character .character-details .alignment {
+  background: url("../css/assets/remaster-pc-sheet/banner-bg.webp") repeat-x center;
+}
+.remaster.sheet.actor.character.dark-theme section.window-content .crb-style .sheet-body .sheet-content .tab.character .character-details .alignment::after {
+  background: url("../css/assets/remaster-pc-sheet/banner-bg2.webp") no-repeat right;
+}
