@@ -66,3 +66,37 @@ body {
 .pf2e-badge-info {
   background: #4A90E2;
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #2B2B2B;
+    color: #FFFFFF;
+  }
+
+  .pf2e-button,
+  .pf2e-tab {
+    background: var(--pf2e-primary-dark);
+    color: #FFFFFF;
+  }
+
+  .pf2e-button:hover,
+  .pf2e-tab:hover {
+    background: var(--pf2e-primary-accent);
+  }
+
+  .pf2e-tab.inactive {
+    background: #555555;
+    color: #FFFFFF;
+  }
+
+  .pf2e-panel,
+  .pf2e-card {
+    background: #333333;
+    border: 1px solid #444444;
+  }
+
+  .pf2e-panel:hover,
+  .pf2e-card:hover {
+    box-shadow: 0 0 4px rgba(60,124,89,0.3);
+  }
+}
