@@ -3,12 +3,12 @@
 :root,
 .app,
 .themed.theme-light {
-  --color-pf-primary: #3C7C59;
-  --color-pf-primary-dark: #305F47;
-  --color-pf-secondary: #3C9D63;
-  --pf2e-bg-light: #F8F6F1;
-  --pf2e-bg-dark: #E0E0E0;
-  --pf2e-text-color: #1C1C1C;
+  --color-pf-primary: #0B4F36;
+  --color-pf-primary-dark: #063324;
+  --color-pf-secondary: #0B4F36;
+  --pf2e-bg-light: #1B1B1B;
+  --pf2e-bg-dark: #121212;
+  --pf2e-text-color: #F0F0F0;
   --pf2e-font-family: "Noto Sans", sans-serif;
   --pf2e-font-size: 16px;
   --pf2e-line-height: 1.5;
@@ -26,6 +26,10 @@ body {
   background-color: var(--color-pf-primary);
   color: var(--text-light);
   padding: 0.5rem;
+}
+
+.pf2e.actor nav.sheet-navigation {
+  background: var(--color-pf-secondary);
 }
 
 .pf2e button,
@@ -120,50 +124,17 @@ body {
   margin-bottom: 0.5rem;
 }
 
+
+/* Resource bars */
+.pf2e .bar {
+  background: var(--pf2e-bg-dark);
+}
+
+.pf2e .bar .bar-value {
+  background: var(--color-pf-primary);
+}
+
 .pf2e.actor.npc .sheet-header {
   background: var(--color-pf-primary-dark);
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background: #2B2B2B;
-    color: #FFFFFF;
-  }
-
-  .pf2e button,
-  .pf2e .tab {
-    background: var(--color-pf-primary-dark);
-    color: #FFFFFF;
-  }
-
-  .pf2e button:hover,
-  .pf2e .tab:hover {
-    background: var(--color-pf-primary);
-  }
-
-  .pf2e .tab.inactive {
-    background: #555555;
-    color: #FFFFFF;
-  }
-
-  .pf2e .panel,
-  .pf2e .card {
-    background: #333333;
-    border: 1px solid #444444;
-  }
-
-  .pf2e .panel:hover,
-  .pf2e .card:hover {
-    box-shadow: 0 0 4px rgba(60,124,89,0.3);
-  }
-
-  .pf2e.actor {
-    background: #2B2B2B;
-    color: #FFFFFF;
-  }
-
-  .pf2e.actor .sheet-body section {
-    background: #333333;
-    border-color: #444444;
-  }
-}
