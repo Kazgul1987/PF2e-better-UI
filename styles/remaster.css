@@ -6,12 +6,25 @@
   --color-pf-primary: #0B4F36;
   --color-pf-primary-dark: #063324;
   --color-pf-secondary: #0B4F36;
+  --primary-remaster: hsl(153, 100%, 8%);       /* #002916 */
+  --primary-light-remaster: hsl(170, 96%, 19%); /* #025F50 */
   --pf2e-bg-light: #1B1B1B;
   --pf2e-bg-dark: #121212;
   --pf2e-text-color: #F0F0F0;
   --pf2e-font-family: "Noto Sans", sans-serif;
   --pf2e-font-size: 16px;
   --pf2e-line-height: 1.5;
+}
+
+.character-sheet .banner {
+  background: linear-gradient(
+    90deg,
+    var(--primary-remaster),
+    var(--primary-light-remaster)
+  );
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
 }
 
 body {
