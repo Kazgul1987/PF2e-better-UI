@@ -1,0 +1,31 @@
+body.pathfinderui-v3 {
+  --color-warm-1: #ee9b3a;
+  --green: #91a82a;
+  --red-light:#ff0000;
+}
+
+
+div.pfui-alliance-viewer {
+  max-width: max-content;
+  line-height: initial;
+  min-width: 10px;
+  min-height: 10px;
+  margin: auto 2px auto 2px;
+  border-radius: 50%;
+}
+
+.pfui-alliance-viewer.alliance-default {
+  background-color: var(--color-warm-1);
+}
+
+.pfui-alliance-viewer.alliance-neutral {
+  background-color: cyan;
+}
+
+.pfui-alliance-viewer.alliance-party {
+  background-color: var(--green);
+}
+
+.pfui-alliance-viewer.alliance-opposition {
+  background-color: var(--red-light);
+}

@@ -1,0 +1,468 @@
+/*************************************************************/
+/* ==================== journal sheet ====================== */
+/*************************************************************/
+
+body.pathfinderui-v3 {
+    --journal-sheet-red-light: rgb(93, 24, 13);
+    --journal-sheet-red:#5d180d;
+    --custom-trait:#61180e;
+	--custom-green: #002a17;
+
+/* Foundry2
+====================================================== */
+--color-light-1: #f7f3e8;
+--color-light-1-90: #f7f3e890;
+--color-light-2: #efe6d8;
+--color-light-2-90: #efe6d890;
+--color-light-3: #e7d1b1;
+--color-light-3-90: #e7d1b190;
+--color-light-4: #d0b8a3;
+--color-light-4-90: #d0b8a390;
+--color-light-5: #9f8475;
+--color-light-5-90: #9f847590;
+--color-light-6: #816b66;
+--color-light-6-90: #816b6690;
+--color-warm-1: #ee9b3a;
+--color-warm-1-90: #ee9b3a90;
+--color-warm-2: #c9593f;
+--color-warm-2-90: #c9593f90;
+--color-warm-3: #5d142b;
+--color-warm-3-90: #5d142b90;
+--color-warm-4: #420418;
+--color-warm-4-90: #42041890;
+--color-warm-5: #26020d;
+--color-warm-5-90: #26020d90;
+--color-cool-1: #b1a0d4;
+--color-cool-1-90: #b1a0d490;
+--color-cool-2: #79689c;
+--color-cool-2-90: #79689c90;
+--color-cool-3: #584a75;
+--color-cool-3-90: #584a7590;
+--color-cool-4: #302831;
+--color-cool-4-90: #30283190;
+--color-cool-5: #0b0a13;
+--color-cool-5-25: rgba(11, 10, 19, 0.25);
+--color-cool-5-50: rgba(11, 10, 19, 0.5);
+--color-cool-5-75: rgba(11, 10, 19, 0.75);
+--color-cool-5-90: rgba(11, 10, 19, 0.9);
+
+--color-level-error: #ce0707;
+--color-level-error-bg: rgba(105, 0, 8, 0.8);
+--color-level-error-border: #750003;
+--color-level-info: #59a1f6;
+--color-level-info-bg: rgba(47, 80, 132, 0.8);
+--color-level-info-border: #5c87b9;
+--color-level-success: #26b231;
+--color-level-success-bg: rgba(26, 107, 34, 0.8);
+--color-level-success-border: #1b8f23;
+--color-level-warning: #ee9b3a;
+--color-level-warning-bg: rgba(214, 150, 0, 0.8);
+--color-level-warning-border: #b18404;
+--color-scrollbar: #5d142b;
+--color-scrollbar-border: #8d151b;
+
+}
+
+
+@font-face {
+    font-family: "FF Good Pro X Cond-Regular";
+    src: url("./fonts/FFGoodProXCond-Regular.ttf") format('truetype');
+}
+
+.app.journal-sheet {
+    font-family: var(--journal-serif);
+    font-size: 1.1em;
+    line-height: 1.5;
+    padding: 10px 25px;
+    box-shadow: none;
+    border: none;
+    background: none;
+    backdrop-filter: none;
+}
+.app.journal-sheet::before {
+    position: absolute;
+    content: " ";
+    width: 106%;
+    height: 105%;
+    top: -1%;
+    left: -3%;
+    background: url(../ui/other/paper_texture.webp);
+    background-size: cover;
+    z-index: -1;
+
+    -webkit-mask-image: url(../ui/other/journal_mask.webp);
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+}
+
+.app.journal-sheet::after {
+    position: absolute;
+    content: " ";
+    width: 106%;
+    height: 105%;
+    top: -1%;
+    left: -3%;
+    background: url(../ui/other/journal_background.webp);
+    background-size: 100% 100%;
+    opacity: 0.90;
+    z-index: -2;
+}
+
+.app.journal-sheet img {
+    border: none;
+}
+
+.app.journal-sheet .window-app .window-header {
+    border-bottom: none;
+}
+
+.app.journal-sheet .window-header {
+    position: relative;
+    top: 2%;
+    flex: 0 0 40px;
+    line-height: 40px;
+
+    color: var(--custom-green);
+    font-weight: 600;
+}
+
+.journal-sheet .window-content {
+    background: none;
+}
+
+.journal-sheet .window-content::before {
+    position: absolute;
+    width: 512px;
+    height: 298px;
+    left: -6px;
+    top: 12px;
+    content: " ";
+    background: url(../ui/other/journal_right_top_corner.webp);
+    background-size: 100% 100%;
+    opacity: 0.09;
+    z-index: -1;
+}
+
+.app.journal-sheet .window-header .window-title {
+    opacity: 0;
+}
+
+.app.journal-sheet .window-header {
+    border: none;
+}
+
+.app:not(.monks-enhanced-journal).journal-sheet form input[name="name"] {
+    position: relative;
+    z-index: 10;
+    padding: 10px 0px 20px 0px;
+    margin-bottom: 10px;
+    border: none;
+    background: none;
+    color: var(--custom-green);
+    font-size: .705cm;
+    font-weight: bold;
+    border-image: url(../ui/frames/brown_line.webp) 25 25 round;
+    border-bottom: 5px groove #eeede0;
+    text-shadow: unset;
+}
+
+.app:not(.monks-enhanced-journal).journal-sheet .window-resizable-handle {
+    bottom: 5%;
+    right: 5%;
+}
+
+.journal-sheet .header-button.close {
+    position: relative;
+    width: 36px;
+    height: 33px;
+
+    color: rgba(0, 0, 0, 0);
+}
+
+.journal-sheet .header-button.close::before {
+    width: 36px;
+    height: 33px;
+    top: 4px;
+    position: absolute;
+    content: " ";
+    background: url(../ui/buttons/close_icon.webp);
+    background-size: 100% 100%;
+}
+
+.journal-sheet .header-button.close:hover {
+    text-shadow: none;
+}
+
+.journal-sheet .header-button.close:hover::before {
+    background: url(../ui/buttons/close_icon_hover.webp);
+    background-size: 100% 100%;
+}
+
+.journal-sheet ::-webkit-scrollbar-thumb {
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background: #74645526;
+}
+
+.journal-sheet ::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+
+.journal-sheet .window-resizable-handle {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    color: var(--main-text-light-color)
+}
+
+.journal-sheet .window-resizable-handle::before {
+    position: absolute;
+    content: " ";
+    background: url(../ui/buttons/players_btn.webp);
+    background-size: 100% 100%;
+    width: 120%;
+    height: 120%;
+    top: 0%;
+    right: -10%;
+}
+
+.journal-sheet button:focus {
+    box-shadow: none;
+}
+
+.journal-sheet button:hover {
+    background: url(../ui/buttons/btn-dnd5e-card_hover.webp) center center no-repeat;
+    background-size: 100% 100%;
+    box-shadow: none;
+}
+
+.journal-sheet button:active {
+    background: url(../ui/buttons/btn.webp) center center no-repeat;
+    background-size: 100% 100%;
+    box-shadow: none;
+}
+
+.journal-sheet.image-popout .window-content {
+    margin-top: 30px;
+    background: none;
+}
+
+.journal-sheet.minimized {
+    padding: 1px 0px;
+}
+
+.journal-sheet.minimized .window-header .window-title {
+    opacity: 100;
+    color: var(--custom-green);
+    font-size: .505cm;
+    font-weight: bold;
+}
+
+.app.journal-sheet.minimized::before {
+    -webkit-mask-image: none;
+    border-image-source: url(../ui/frames/input_border.webp);
+    border-image-slice: 5 20 20 20 fill;
+    border-image-repeat: repeat repeat;
+    border-image-width: auto;
+    border-image-outset: 1px 2px 2px 2px;
+    border-radius: 0;
+    box-shadow: rgb(0, 0, 0) 0px 0px 20px 0px
+}
+
+/*add v10*/
+
+.sheet.journal-entry {
+    --sidebar-width-expanded: 256px;
+    --sidebar-width-collapsed: 30px;
+}
+
+.sheet.journal-entry .pages-list .directory-item.active:first-of-type {
+    border-top: none;
+}
+.sheet.journal-entry .pages-list .directory-item:not(.active) + .active {
+    --color-cool-1-33: #b1a0d433;
+    background: var(--color-cool-1-33);
+}
+.sheet.journal-entry .pages-list .page-heading .page-title {
+    text-indent: 0rem;
+    font-family: "FF Good Pro X Cond-Regular";
+    font-weight: bold;
+}
+.sheet.journal-entry .pages-list .h2 .heading-link {
+    text-indent: 0.5rem;
+    font-family: "FF Good Pro X Cond-Regular";
+}
+.sheet.journal-entry .pages-list .h3 .heading-link {
+    text-indent: 0.5rem;
+    font-family: "FF Good Pro X Cond-Regular";
+}
+
+.sheet.journal-entry .journal-sidebar .action-buttons {
+    flex: 0.1;
+}
+.sheet.journal-entry .pages-list .heading-link {
+    color:var(--custom-green);
+    font-weight: bold;
+}
+.sheet.journal-entry .pages-list .page-heading .page-title {
+    color: var(--color-warm-3);
+    font-weight: bold;
+}
+.sheet.journal-entry .pages-list .page-heading .page-title:hover {
+    color:var(--custom-green) !important;
+    font-weight: bold;
+}
+.sheet.journal-entry .pages-list .h2 .heading-link {
+    color:var(--custom-green);
+    font-weight: bold;
+}
+.sheet.journal-entry .pages-list .h2 .heading-link:hover {
+    color:var(--custom-green);
+    font-weight: bold;
+}
+.sheet.journal-entry .pages-list .page-heading {
+    color:var(--custom-green);
+    font-weight: bold;
+}
+.sheet.journal-entry .journal-sidebar .directory-header .view-mode {
+    color:var(--custom-green);
+}
+.sheet.journal-entry .journal-sidebar .directory-header .toggle-search-mode {
+    color:var(--custom-green);
+}
+.directory .directory-header .header-search input {
+    background: unset;
+    border: unset;
+    color: var(--main-text-light-color);
+}
+.sheet.journal-entry .journal-sidebar .directory-header .header-search input {
+    color:var(--custom-green);
+    font-family: "FF Good Pro X Cond-Regular";
+    font-weight: bold;
+}
+.sheet.journal-entry .journal-sidebar .directory-header .collapse-toggle {
+    color:var(--custom-green);
+}
+.sheet.journal-entry .journal-entry-content {
+    flex: 1;
+    height: 94%;
+    margin-top: 15px;
+    margin-right: 12px;
+    background: none;
+    border: none;
+    border-radius: 6px 0 0 0;
+}
+
+.journal-sheet button {
+    position: relative;
+    color: var(--main-text-light-color);
+    font-weight: 600;
+    background: url(../ui/buttons/btn.webp) center center no-repeat;
+    background-size: 95% 95%;
+    border: none;
+}
+section.secret button.reveal {
+    color: var(--pfui-main-grey-color);
+}
+.sheet.journal-entry-page .journal-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.journal-entry-page .journal-page-content [data-visibility]:not([data-visibility=all])[data-visibility=gm] {
+    font-style: italic;
+    color: var(--pfui-main-color);
+    background: var(--color-warm-3);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border: none;
+}
+.journal-entry-page .journal-page-content [data-visibility]:not([data-visibility=all]) {
+    outline: none;
+    padding: 2px;
+}
+.journal-entry-page .journal-page-content [data-pf2-effect-area] {
+    font-family: "Good OT";
+    color: var(--pfui-main-color);
+    background: var(--custom-trait);
+    padding: 0px 3px;
+    border: 1px solid var(--glassy);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+}
+.journal-entry-page .journal-page-content a.inline-check[data-pf2-traits*=secret], .journal-page-content span[data-pf2-check][data-pf2-traits*=secret] {
+    font-family: "Good OT";
+    color: var(--pfui-main-color);
+    background: var(--custom-trait);
+    padding: 0px 3px;
+    border: 1px solid var(--glassy);
+    box-shadow: var(--box-shadow);
+    border-radius: 3px;
+}	
+.journal-entry-page .journal-page-content a.inline-check, .journal-page-content span[data-pf2-check] {
+    font-family: "Good OT";
+    color: var(--pfui-main-color);
+    background: var(--custom-trait);
+    padding: 0px 3px;
+    border: 1px solid var(--glassy);
+    box-shadow: var(--box-shadow);
+    border-radius: 3px;
+}
+.journal-entry-page .journal-page-content a.inline-check, .journal-page-content span[data-pf2-action] {
+    font-family: "Good OT";
+    color: var(--pfui-main-color);
+    background: var(--custom-trait);
+    padding: 0px 3px;
+    border: 1px solid var(--glassy);
+    box-shadow: var(--box-shadow);
+    border-radius: 3px;
+}
+.journal-entry-page .journal-page-content a.content-link, .journal-entry-page .journal-page-content a.inline-roll {
+    font-family: "Good OT";
+    color: var(--pfui-main-color);
+    background: var(--custom-trait);
+    padding: 0px 3px;
+    border: 1px solid var(--glassy);
+    box-shadow: var(--box-shadow);
+    border-radius: 3px;
+}	
+.prosemirror {
+    color:var(--pfui-main-color);
+}
+label.checkbox {
+    color: revert;
+}
+.prosemirror menu {
+    background: unset;
+}
+.prosemirror menu .pm-dropdown > span {
+    color:var(--color-warm-1);
+}
+.prosemirror .editor-container .editor-content {
+    color: var(--color-text-dark-primary);
+}
+.prosemirror menu button,
+.prosemirror menu .pm-dropdown {
+    border: unset;
+    background: var(--color-warm-3);
+}
+.prosemirror menu button:hover,
+.prosemirror menu button.active {
+    background: var(--color-warm-4);
+    color:var(--color-warm-1);
+}
+.prosemirror menu .pm-dropdown:hover i {
+    color:var(--color-warm-1);
+}
+.prosemirror menu .pm-dropdown ul {
+    background: radial-gradient(var(--color-cool-4-90) -200%, var(--color-cool-5-90));
+    color: var(--pfui-main-grey-color);
+    border: unset;
+}
+.prosemirror menu .pm-dropdown li:hover {
+    background: var(--color-cool-3-90);
+    color: var(--color-cool-1);
+    border: unset;
+}

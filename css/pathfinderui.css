@@ -1,0 +1,1482 @@
+@import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
+@import 'carousel.css';
+@import 'text-editor.css';
+@import "systems/pfui-pf2e.css";
+@import 'compatibility.css';
+@import 'privacy-button.css';
+@import 'alliance-viewer.css';
+@import 'dark-sheet.css';
+@import 'dark-party-sheet.css';
+@import 'dark-loot-sheet.css';
+@import 'dark-npc-sheet.css';
+@import 'dark-hazard-sheet.css';
+@import 'dark-kingdom-sheet.css';
+@import 'simply-portraits.css';
+@import 'dark-custom.css';
+@import 'pause-icon-config.css';
+
+/* POLICES
+====================================================== */
+@font-face {
+	font-family: "Taroca";
+	src: url("./systems/fonts/Taroca.ttf") format('truetype');
+}
+@font-face {
+	font-family: "Good OT";
+	src: url("./systems/fonts/GoodOT.otf") format('opentype');
+}
+@font-face {
+	font-family: "Good OT Bold";
+	src: url("./systems/fonts/GoodOT-Bold.otf") format('opentype');
+}
+@font-face {
+	font-family: "Good OT Cond Bold";
+	src: url("./systems/fonts/GoodOT-CondBold.otf") format('opentype');
+}
+@font-face {
+	font-family: "Good OT Italic";
+	src: url("./systems/fonts/GoodOT-Italic.otf") format('opentype');
+}
+@font-face {
+	font-family: "Sabon LT Std";
+	src: url("./systems/fonts/Sabon-LT-Std-Roman.otf") format('opentype');
+}
+@font-face {
+	font-family: "Sabon LT Italic";
+	src: url("./systems/fonts/Sabon-LT-Std-Italic.ttf") format('truetype');
+}
+@font-face {
+    font-family: "tauri";
+    src: url("./systems/fonts/Tauri-Regular.ttf") format('truetype');
+}
+
+/*************************************************************/
+/*============ Background/Pause img / Logo ==================*/
+/*************************************************************/
+body.pathfinderui-v3 {
+    background-image: url(../ui/artwork/pfrpg-background.webp);
+    background-size: cover;
+}
+
+body.pathfinderui-v3 {
+    --pfui-main-color: #cfbda7;
+    --pfui-main-grey-color: #98968a;
+    --rpg-styled-ui-color: #837360;
+    --rpg-styled-ui-grey-color: #7a7971;
+    --rpg-styled-ui-background: #ffffff14;
+    --green: #91a82a;
+    --blue: #171f69;
+    --success-critical:rgb(107, 255, 0);
+    --success: rgb(0, 241, 255);
+    --failure: rgb(255, 129, 0);
+    --criticalFailure:rgb(247, 59, 59);
+    --red: #5e0000;
+    --red-light:#ff0000;
+    --custom-trait:#61180e;
+    --border-color: #372d25;
+    --serif: Eczar,Georgia,serif;
+    --journal-serif: "Vollkorn",var(--serif);
+    --glassy: 0px 0px 3px 0px rgba(255, 255, 255, 0.4) inset, 0px 0px 2px 1px rgba(0, 0, 0, 1), 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    --glassy-shadow: var(--glassy) , var(--box-shadow);
+    --glassy-sharp: 0px 0px 0px 1px rgba(255, 255, 255, 0.4) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8);
+    --glassy-sharp-highlight: 0px 0px 0px 1px rgba(245, 222, 179, 0.7) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8);
+
+    --background: #100d0d;
+    --border-radius: 3px;
+    --border-radius-5: 5px;
+    --box-shadow: 0px 1px 3px 1px black;
+    --box-shadow-pf2e: inset 0 0 0 1px rgba(0, 0, 0, 0.3), inset 0 0 0 2px rgba(255, 255, 255, 0.2);
+    --box-shadow-light: inset 0 0 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 2px rgba(0, 0, 0, 0.4), inset 0px 0px 3px 1px var(--color-cool-3);
+
+    --primary-remaster: hsl(153, 100%, 8%);
+	--primary-light-remaster: hsl(170, 96%, 19%);
+    --secondary: var(var(--color-cool-3));
+
+    --text-shadow: 0px 1px 2px black;
+
+/* Foundry2
+====================================================== */
+    --color-light-1: #f7f3e8;
+    --color-light-1-90: #f7f3e890;
+    --color-light-2: #efe6d8;
+    --color-light-2-90: #efe6d890;
+    --color-light-3: #e7d1b1;
+    --color-light-3-90: #e7d1b190;
+    --color-light-4: #d0b8a3;
+    --color-light-4-90: #d0b8a390;
+    --color-light-5: #9f8475;
+    --color-light-5-90: #9f847590;
+    --color-light-6: #816b66;
+    --color-light-6-90: #816b6690;
+    --color-warm-1: #ee9b3a;
+    --color-warm-1-90: #ee9b3a90;
+    --color-warm-2: #c9593f;
+    --color-warm-2-90: #c9593f90;
+    --color-warm-3: #5d142b;
+    --color-warm-3-90: #5d142b90;
+    --color-warm-4: #420418;
+    --color-warm-4-90: #42041890;
+    --color-warm-5: #26020d;
+    --color-warm-5-90: #26020d90;
+    --color-cool-1: #b1a0d4;
+    --color-cool-1-90: #b1a0d490;
+    --color-cool-2: #79689c;
+    --color-cool-2-90: #79689c90;
+    --color-cool-3: #584a75;
+    --color-cool-3-90: #584a7590;
+    --color-cool-4: #302831;
+    --color-cool-4-90: #30283190;
+    --color-cool-5: #0b0a13;
+    --color-cool-5-25: rgba(11, 10, 19, 0.25);
+    --color-cool-5-50: rgba(11, 10, 19, 0.5);
+    --color-cool-5-75: rgba(11, 10, 19, 0.75);
+    --color-cool-5-90: rgba(11, 10, 19, 0.9);
+
+    --color-level-error: #ce0707;
+    --color-level-error-bg: rgba(105, 0, 8, 0.8);
+    --color-level-error-border: #750003;
+    --color-level-info: #59a1f6;
+    --color-level-info-bg: rgba(47, 80, 132, 0.8);
+    --color-level-info-border: #5c87b9;
+    --color-level-success: #26b231;
+    --color-level-success-bg: rgba(26, 107, 34, 0.8);
+    --color-level-success-border: #1b8f23;
+    --color-level-warning: #ee9b3a;
+    --color-level-warning-bg: rgba(214, 150, 0, 0.8);
+    --color-level-warning-border: #b18404;
+    --color-scrollbar: #5d142b;
+    --color-scrollbar-border: #8d151b;
+
+    --color-bg-physical: rgba(132, 132, 132, 0.125);
+    --color-bg-btn-minor-active: #b5b3a4;
+    --color-border-physical: #737272;
+    --color-text-physical: #a0a0a0;
+}
+
+body.pathfinderui-v3 #logo {
+    left: 22px;
+}
+
+body.pathfinderui-v3.compact-mode #logo {
+    display: none;
+}
+
+body.pathfinderui-v3 .hide {
+    display: none;
+}
+
+body.pathfinderui-v3 .new-logo {
+    z-index: 6;
+    position: relative;
+    left: 22px;
+    width: 80px;
+    top: 10px;
+    color: var(--pfui-main-color);
+    font-family: 'Kurale', serif;
+    font-weight: 800;
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+body.pathfinderui-v3 .new-logo::before {
+    position: absolute;
+    content: " ";
+    width: 128%;
+    height: 130%;
+    top: -15%;
+    background: url(../ui/buttons/controls_btn.webp);
+    background-size: 100% 100%;
+    z-index: -1;
+    left: -10%;
+}
+
+body.pathfinderui-v3 #context-menu ol.context-items, 
+body.pathfinderui-v3 #context-menu li.context-group > ol {
+    color: var(--pfui-main-color);
+    background: var(--color-cool-5);
+    border: unset;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-shadow: var(--text-shadow);
+}
+body.pathfinderui-v3 #context-menu li.context-item:hover {
+    color: var(--color-warm-1);
+}
+
+
+/*************************************************************/
+/*======================= SIDEBAR ===========================*/
+/*************************************************************/
+
+body.pathfinderui-v3 #sidebar {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: var(--sidebar-width);
+    height: calc(100% - 10px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow: visible;
+    margin: -10px 0 0 0px;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    border: none;
+}
+body.pathfinderui-v3 #sidebar.collapsed .sidebar-tabs {
+    padding: 10px 4px 0px 3px;
+    margin-top: 0;
+    margin-bottom: -30px;
+}
+body.pathfinderui-v3 #sidebar.app.collapsed {
+    padding: 0;
+    top: 5px;
+}
+
+body.pathfinderui-v3 #sidebar.app.collapsed::before {
+    position: absolute;
+    z-index: -1;
+    width: 40px !important;
+    left: -4px !important;
+    height: 110% !important;
+}
+
+body.pathfinderui-v3 #sidebar::before {
+    position: absolute;
+    z-index: -1;
+    content: " ";
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: url(../ui/frames/chat.webp);
+    background-size: 100% 100%;
+}
+
+body.pathfinderui-v3 #sidebar::after {
+    position: absolute;
+    z-index: -1;
+    content: " ";
+    width: 300px;
+    height: 76px;
+    left: 0;
+    background: url(../ui/frames/header.webp);
+    background-size: 300px 76px;
+}
+
+body.pathfinderui-v3 #sidebar .inline-roll .dice-tooltip {
+    background: var(--color-cool-5);
+    border: 1px solid var(--color-cool-5);
+    box-shadow: var(--glassy-shadow);
+}
+body.pathfinderui-v3 .chat-message .dice-tooltip .dice-rolls .roll.die.min {
+    color: var(--criticalFailure);
+    text-shadow: var(--text-shadow);
+    filter: sepia(0.5) hue-rotate(-60deg);
+}
+body.pathfinderui-v3 .chat-message .dice-tooltip .dice-rolls .roll.die.max {
+    color: var(--success-critical);
+    text-shadow: var(--text-shadow);
+}
+body.pathfinderui-v3 #sidebar .dice-tooltip .part-header .part-total {
+    background: var(--color-warm-3);
+    text-shadow: var(--text-shadow);
+}
+
+body.pathfinderui-v3 #sidebar .sidebar-tabs > .item:before {
+    position: absolute;
+    content: ' ';
+    background: url(../ui/frames/red_line.webp);
+    width: 100%;
+    height: 3px;
+    bottom: -3px;
+    left: 0;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+}
+
+body.pathfinderui-v3 #sidebar .sidebar-tabs {
+    text-align: center;
+    box-shadow: none;
+    border-bottom: none;
+    padding: 0 10px;
+    margin-top: 10px;
+}
+
+body.pathfinderui-v3 #sidebar .sidebar-tabs > .item {
+    line-height: 0;
+    flex: 0 0 32px;
+    height: 32px;
+    border-radius: 100%;
+    margin-bottom: 4px;
+}
+
+body.pathfinderui-v3 #sidebar .sidebar-tabs > .item.active {
+    border: 1px solid var(--red-light);
+}
+
+body.pathfinderui-v3 #sidebar nav.sidebar-tabs a[data-tab="chat"] i {
+    content: "";
+    background-image: url("../ui/sidebar/sidebar-button-chat.webp") !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: inline-block !important;
+    background-position:center !important;
+    background-size:100% !important;
+    background-repeat: no-repeat;
+}
+
+body.pathfinderui-v3 #sidebar nav.sidebar-tabs a[data-tab="chat"] i::before {
+    content: "";
+}
+
+body.pathfinderui-v3 #sidebar nav.sidebar-tabs a[data-tab="combat"] i {
+    content: "";
+    background-image: url("../ui/sidebar/sidebar-button-combat.webp") !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: inline-block !important;
+    background-position:center !important;
+    background-size:100% !important;
+    background-repeat: no-repeat;
+}
+
+body.pathfinderui-v3 #sidebar nav.sidebar-tabs a[data-tab="combat"] i::before {
+    content: "";
+}
+
+body.pathfinderui-v3 #sidebar nav.sidebar-tabs a[data-tab="scenes"] i {
+    content: "";
+    background-image: url("../ui/sidebar/sidebar-button-scenes.webp") !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: inline-block !important;
+    background-position:center !important;
+    background-size:100% !important;
+    background-repeat: no-repeat;
+}
+
+body.pathfinderui-v3 #sidebar nav.sidebar-tabs a[data-tab="scenes"] i::before {
+    content: "";
+}
+
+body.pathfinderui-v3 #sidebar nav.sidebar-tabs a[data-tab="actors"] i {
+    content: "";
+    background-image: url("../ui/sidebar/sidebar-button-actors.webp") !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: inline-block !important;
+    background-position:center !important;
+    background-size:100% !important;
+    background-repeat: no-repeat;
+}
+
+body.pathfinderui-v3 #sidebar nav.sidebar-tabs a[data-tab="actors"] i::before {
+    content: "";
+}
+
+body.pathfinderui-v3 #sidebar nav.sidebar-tabs a[data-tab="items"] i {
+    content: "";
+    background-image: url("../ui/sidebar/sidebar-button-items.webp") !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: inline-block !important;
+    background-position:center !important;
+    background-size:100% !important;
+    background-repeat: no-repeat;
+}
+
+body.pathfinderui-v3 #sidebar nav.sidebar-tabs a[data-tab="items"] i::before {
+    content: "";
+}
+
+body.pathfinderui-v3 #sidebar nav.sidebar-tabs a[data-tab="journal"] i {
+    content: "";
+    background-image: url("../ui/sidebar/sidebar-button-journal.webp") !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: inline-block !important;
+    background-position:center !important;
+    background-size:100% !important;
+    background-repeat: no-repeat;
+}
+
+body.pathfinderui-v3 #sidebar nav.sidebar-tabs a[data-tab="journal"] i::before {
+    content: "";
+}
+
+body.pathfinderui-v3 #sidebar nav.sidebar-tabs a[data-tab="tables"] i {
+    content: "";
+    background-image: url("../ui/sidebar/sidebar-button-tables.webp") !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: inline-block !important;
+    background-position:center !important;
+    background-size:100% !important;
+    background-repeat: no-repeat;
+}
+
+body.pathfinderui-v3 #sidebar nav.sidebar-tabs a[data-tab="tables"] i::before {
+    content: "";
+}
+
+body.pathfinderui-v3 #sidebar nav.sidebar-tabs a[data-tab="playlists"] i {
+    content: "";
+    background-image: url("../ui/sidebar/sidebar-button-playlists.webp") !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: inline-block !important;
+    background-position:center !important;
+    background-size:100% !important;
+    background-repeat: no-repeat;
+}
+
+body.pathfinderui-v3 #sidebar nav.sidebar-tabs a[data-tab="playlists"] i::before {
+    content: "";
+}
+
+body.pathfinderui-v3 #sidebar nav.sidebar-tabs a[data-tab="compendium"] i {
+    content: "";
+    background-image: url("../ui/sidebar/sidebar-button-compendium.webp") !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: inline-block !important;
+    background-position:center !important;
+    background-size:100% !important;
+    background-repeat: no-repeat;
+}
+
+body.pathfinderui-v3 #sidebar nav.sidebar-tabs a[data-tab="compendium"] i::before {
+    content: "";
+}
+
+body.pathfinderui-v3 #sidebar nav.sidebar-tabs a[data-tab="settings"] i {
+    content: "";
+    background-image: url("../ui/sidebar/sidebar-button-settings.webp") !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: inline-block !important;
+    background-position:center !important;
+    background-size:100% !important;
+    background-repeat: no-repeat;
+}
+
+body.pathfinderui-v3 #sidebar nav.sidebar-tabs a[data-tab="settings"] i::before {
+    content: "";
+}
+
+body.pathfinderui-v3 #sidebar nav.sidebar-tabs a[data-tab="cards"] i {
+    content: "";
+    background-image: url("../ui/sidebar/sidebar-button-cards.webp") !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: inline-block !important;
+    background-position:center !important;
+    background-size:100% !important;
+    background-repeat: no-repeat;
+}
+
+body.pathfinderui-v3 #sidebar nav.sidebar-tabs a[data-tab="cards"] i::before {
+    content: "";
+}
+
+body.pathfinderui-v3 #sidebar nav.sidebar-tabs a[data-tab="macros"] i {
+    content: "";
+    background-image: url("../ui/sidebar/sidebar-button-macros.webp") !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: inline-block !important;
+    background-position:center !important;
+    background-size:100% !important;
+    background-repeat: no-repeat;
+}
+
+body.pathfinderui-v3 #sidebar nav.sidebar-tabs a[data-tab="macros"] i::before {
+    content: "";
+}
+
+body.pathfinderui-v3 #sidebar nav.sidebar-tabs a[data-tab="folders"] i {
+    content: "";
+    background-image: url("../ui/sidebar/sidebar-button-folder.webp") !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: inline-block !important;
+    background-position:center !important;
+    background-size:100% !important;
+    background-repeat: no-repeat;
+}
+
+body.pathfinderui-v3 #sidebar nav.sidebar-tabs a[data-tab="folders"] i::before {
+    content: "";
+}
+
+/*************************************************************/
+/*======================= CHAT TAB ==========================*/
+/*************************************************************/
+body.pathfinderui-v3 #chat-form {
+    margin: 0 5px 5px;
+}
+
+body.pathfinderui-v3 #chat-form textarea {
+    font-family: "tauri";
+    width: 99%;
+    margin: 3px 0px 0px 2px;
+    background: radial-gradient(var(--color-cool-5-50), transparent)!important;
+    color: var(--pfui-main-grey-color);
+    border: 1px solid var(--color-cool-5);
+    box-shadow: var(--glassy);
+    border-radius: var(--border-radius);
+    backdrop-filter: blur(5px);
+}
+body.pathfinderui-v3 #chat-form textarea:hover {
+    border: none;
+    outline: 2px solid var(--color-cool-4);
+    box-shadow: var(--box-shadow);
+}
+
+body.pathfinderui-v3 #chat-form textarea:focus {
+    border: none;
+    outline: 2px solid var(--color-cool-4);
+    box-shadow: var(--box-shadow);
+}
+
+body.pathfinderui-v3 #chat-controls {
+    color: var(--rpg-styled-ui-color);
+}
+
+body.pathfinderui-v3 #chat-controls::before {
+    position: absolute;
+    content: ' ';
+    background: url(../ui/frames/brown_line.webp);
+    background-size: 300px 7px;
+    left: -3px;
+    width: var(--sidebar-width);
+    height: 7px;
+    top: -8px;
+}
+
+body.pathfinderui-v3 #chat-log .message {
+    position: relative;
+    color: var(--rpg-styled-ui-color);
+    border: unset;
+    background: transparent;
+    padding: 10px 10px 15px 10px;
+    margin: 0px 0px;
+}
+
+body.pathfinderui-v3 #chat-log .message::before {
+    content: " ";
+    position: absolute;
+    background-repeat: no-repeat;
+    background: url(../ui/frames/chat-texture-light.webp) !important;
+    background-size: 95% 110% !important;
+    width: calc(100% + 35px);
+    height: calc(100% + 15%);
+    left: -10px;
+    top: -15%;
+    z-index: -1;
+
+    filter: brightness(1.4);
+}
+
+body.pathfinderui-v3 #chat-log .message.whisper::before {
+    background: url(../ui/frames/chat-texture-light-whisper.webp) !important;
+    background-size: 100% 100% !important;
+    filter: brightness(0.3);
+}
+
+body.pathfinderui-v3 #chat-log .message.blind::before {
+    background: url(../ui/frames/chat-texture-light-blind.webp) !important;
+    background-size: 100% 100% !important;
+    filter: brightness(0.8);
+}
+
+body.pathfinderui-v3 #chat-log .message .message-header {
+    color: var(--pfui-main-color);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+body.pathfinderui-v3 .chat-message .message-content {
+    color: var(--color-bg-btn-minor-active);
+    text-shadow: 0px 1px 1px black;
+}
+
+body.pathfinderui-v3 .chat-message .table-draw .table-description {
+    border-top: 1px solid var(--monks-border-color);
+    color: var(--pfui-main-color)
+}
+
+body.pathfinderui-v3 .chat-message .table-draw .table-results .table-result img.result-image {
+    filter: invert(75%);
+    border: none;
+}
+
+body.pathfinderui-v3 .dice-roll .dice-formula {
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+    background: var(--color-cool-5-50);
+    border: 1px solid var(--color-cool-5);
+    box-shadow: var(--glassy);
+    color: var(--pfui-main-color);
+    border-radius: 10px;
+}
+
+/* Lighten damage type text, e.g. Slashing, Fire, etc */
+body.pathfinderui-v3 .dice-roll .dice-result .dice-tooltip h3 {
+	filter: brightness(300%);
+}
+
+body.pathfinderui-v3 .dice-tooltip .part-header .part-flavor {
+    color: var(--pfui-main-color);
+}
+
+
+body.pathfinderui-v3 [data-visibility=gm]:is(div,em,p,span,strong) {
+    background: transparent;
+    border: transparent;
+    background-size: 100% 100%;
+
+}
+body.pathfinderui-v3 .flavor-text div.degree-of-success .criticalSuccess{
+    color: var(--success-critical)!important;
+    text-shadow: var(--text-shadow);
+}
+body.pathfinderui-v3 .flavor-text div.degree-of-success .success{
+    color: var(--success)!important;
+    text-shadow: var(--text-shadow);
+}
+body.pathfinderui-v3 .flavor-text div.degree-of-success .failure{
+    color:var(--failure)!important;
+    text-shadow: var(--text-shadow);
+}
+body.pathfinderui-v3 .flavor-text div.degree-of-success .criticalFailure{
+    color: var(--criticalFailure)!important;
+    text-shadow: var(--text-shadow);
+}
+
+body.pathfinderui-v3 .dice-roll .dice-total {
+    flex: 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: var(--pf2e-shadow-is-dark);
+    background: var(--color-cool-5-50);
+    border: 1px solid var(--color-cool-5);
+    box-shadow: var(--glassy);
+    color: var(--pfui-main-color);
+    border-radius: 10px;
+  }
+  body.pathfinderui-v3 .dice-roll .dice-total.success {
+    color: var(--success-critical)!important;
+  }
+  body.pathfinderui-v3 .dice-roll .dice-total.failure {
+    color: var(--criticalFailure)!important;
+  }
+  body.pathfinderui-v3 .dice-roll .dice-tooltip {
+    display: none;
+  }
+
+body.pathfinderui-v3 .flavor-text .adjusted-dc.decreased {
+    text-rendering: optimizeLegibility;
+    background-color: var(--primary);
+    border: 1px solid rgba(255,255,255,0.5);
+    text-shadow: none;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 1px rgb(0 0 0 / 50%);
+    color: #cfbda7 !important;
+    font-family: var(--sans-serif);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: .05em;
+    line-height: 2;
+    padding: 3px 3px;
+    text-transform: uppercase;
+}
+
+body.pathfinderui-v3 .message-sender {
+    color: #cfbda7;
+    font-weight: bold;
+    border-bottom-color: darkred;
+    text-decoration: underline;
+}
+
+body.pathfinderui-v3 #chat-controls .roll-type-select {
+    font-family: Taroca;
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+    top: 1px;
+    background-position: initial;
+    border: 1px solid #000;
+    background: radial-gradient(var(--color-cool-5-50), transparent)!important;
+    box-shadow: var(--box-shadow);
+    color: var(--pfui-main-grey-color);
+    border-radius: var(--border-radius);
+    margin: 0px 3px 0px 3px!important;
+    backdrop-filter: blur(5px);
+}
+
+body.pathfinderui-v3 #sidebar .sidebar-tab option, body.pathfinderui-v3 .sidebar-tab optgroup {
+    color: var(--pfui-main-color);
+    background: var(--background)!important;
+}
+
+
+/*************************************************************/
+/*================= SIDEBAR FOLDER & WIDGETS ================*/
+/*************************************************************/
+body.pathfinderui-v3 #sidebar .directory .directory-header .header-search {
+    position: relative;
+}
+body.pathfinderui-v3 #sidebar .directory .directory-header .header-search .fas{
+    position: relative;
+    color: #a0836c;
+}
+body.pathfinderui-v3 #sidebar .directory .directory-header .header-search::after{
+    position: absolute;
+    content: ' ';
+    bottom: 3px;
+    right: 1%;
+
+    width: 98%;
+    height: 1px;
+
+    border-bottom: 1px solid #332a1f;
+    box-shadow: 0px 1px 0px 0px #675241;
+}
+body.pathfinderui-v3 #sidebar .directory .directory-header .header-search input {
+    background: none;
+    border-radius: 0;
+    border: none;
+    color: var(--color-text-light-highlight);
+    transition: all 0.2s;
+}
+body.pathfinderui-v3 #sidebar .directory .directory-header .header-search input:focus{
+   box-shadow: none;
+}
+body.pathfinderui-v3 #sidebar .directory .directory-header .header-search input::placeholder {
+    color: var(--pfui-main-color)
+}
+
+body.pathfinderui-v3 hr {
+    border: none;
+    border-top: 1px dotted #675241;
+    border-bottom:unset;
+}
+
+
+body.pathfinderui-v3 #settings h2 {
+    color: var(--pfui-main-color);
+    margin: 6px 5px;
+    border: none;
+    border-bottom: 1px solid #675241;
+    background: rgb(125 125 125 / 10%);
+}
+
+body.pathfinderui-v3 .sidebar-tab .directory-footer button{
+    background-image: url(../ui/buttons/button-red.webp);
+    text-align: center;
+    background-position: center !important;
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat;
+    min-height: 32px;
+    border: 0px solid #b5b3a4;
+    color : white;
+    text-shadow: 2px 2px black ;
+}
+body.pathfinderui-v3 #sidebar li.folder.collapsed > .folder-header h3:hover {
+    color: var(--green);
+    text-shadow: 0 0 3px var(--color-shadow-primary);
+}
+body.pathfinderui-v3 #sidebar li.folder > .folder-header .create-button:hover {
+    color: var(--green);
+    text-shadow: 0 0 3px var(--color-shadow-primary);
+}
+
+
+
+/*************************************************************/
+/*=============== SIDEBAR FOLDERs AS BUTTONS ================*/
+/*************************************************************/
+body.pathfinderui-v3 .settings-sidebar #game-details {
+    color: var(--pfui-main-grey-color);
+    background: var(--color-cool-5-50);
+    text-shadow: var(--text-shadow);
+}
+body.pathfinderui-v3 #settings button, 
+body.pathfinderui-v3 #sidebar .directory .action-buttons button {
+    z-index: 18;
+    color: var(--pfui-main-grey-color)!important;
+    font-family: 'Kurale', serif;
+    line-height: 25px;
+    position: relative;
+    background: var(--color-cool-5-50)!important;
+    border: 1px solid #332a1f;
+    box-shadow: 0px 0px 0px 1px #675241;
+    transition: all 0.2s;
+}
+
+body.pathfinderui-v3 #sidebar .directory .action-buttons button {
+    margin: 6px 5px;
+    height: auto;
+}
+
+body.pathfinderui-v3 #settings button:hover, 
+body.pathfinderui-v3 #sidebar .directory .action-buttons button:hover {
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+    color: var(--color-warm-1)!important;
+    text-shadow: 0 0 15px var(--red-light)!important;
+    background: url(../ui/frames/header.webp) center center!important;
+    background-size: 100% 45px!important;
+    backdrop-filter: blur(5px);
+}
+
+body.pathfinderui-v3 #settings button::before,
+body.pathfinderui-v3 #sidebar .directory .action-buttons button::before {
+    position: absolute;
+    content: ' ';
+    background: url(../ui/buttons/corner.webp) center center no-repeat;
+    background-size: auto;
+    width: 13px;
+    height: 27px;
+    left: -5px;
+    top: 0;
+    transform: rotate(180deg);
+}
+
+body.pathfinderui-v3 #settings button::after,
+body.pathfinderui-v3 #sidebar .directory .action-buttons button::after {
+    position: absolute;
+    content: ' ';
+    background: url(../ui/buttons/corner.webp) center center no-repeat;
+    background-size: auto;
+    width: 13px;
+    height: 26px;
+    right: -5px;
+    top: 0;
+}
+
+/*************************************************************/
+/*================== COMPENDIUM HEADERS =====================*/
+/*************************************************************/
+/* scene thumb size */
+body.pathfinderui-v3 #scenes .scene h3 {
+    line-height: 43px;
+    text-shadow: 2px 1px 2px #000;
+}
+body.pathfinderui-v3 #scenes .scene {
+    height: 43px;
+}
+body.pathfinderui-v3 .compendium-sidebar .directory-item.compendium {
+    height: 45px;
+    border-bottom: 2px solid transparent;
+}
+body.pathfinderui-v3 .compendium-sidebar .directory-item.compendium .compendium-name {
+    font-size: var(--font-size-14);
+    text-transform: uppercase;
+    line-height: 0.5rem;
+    margin-bottom: 10px;
+}
+/* #endregion */
+
+/* #region Remove speaker name background colors in Chat window */
+body.pathfinderui-v3 #chat-log .message .message-header .message-sender {
+    background-color: rgba(0,0,0,0) !important;
+}
+/* #endregion */
+
+/* #region Fix so as not to bigfoot on VTTA's tag system */
+body.pathfinderui-v3 #sidebar section > ol.directory-list > li header > span.vtta-folder-label {
+    text-shadow: 0px 0px 0px black !important;
+}
+/* #endregion */
+
+/* #region Chat log */
+/* differentiate public roll from private or blind.
+ Private uses class whisper, blind uses class blind AND whisper, Self Roll
+ uses class whisper (identical to Private Roll for CSS)*/
+body.pathfinderui-v3 #chat-log .message.whisper {
+    font-style: italic;
+}
+
+body.pathfinderui-v3 #chat-log .chat-portrait-text-size-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+/*************************************************************/
+/*========================= HOTBAR ==========================*/
+/*************************************************************/
+body.pathfinderui-v3 #fps {
+    position: absolute;
+    right: 0px;
+    bottom: 7px;
+    width: 60px;
+    color: var(--color-warm-1);
+    background: var(--color-cool-5);
+    border: unset;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-shadow: var(--text-shadow);
+}
+body.pathfinderui-v3 #fps label {
+    display: none;
+}
+body.pathfinderui-v3 #ui-bottom > div {
+    justify-content: flex-start;
+}
+
+body.pathfinderui-v3 #hotbar {
+    transition: 0.5s ease-out 0.5s;
+}
+
+body.pathfinderui-v3 #hotbar #action-bar {
+    position: relative;
+    background-repeat: no-repeat;
+}
+body.pathfinderui-v3 #hotbar .macro.inactive {
+    background: var(--color-cool-5-75);
+    border-radius: 50%;
+    border: 2px solid var(--rpg-styled-ui-color);
+    box-shadow: var(--glassy) 0px 0px 10px 0px;
+}
+body.pathfinderui-v3 #hotbar .macro.active {
+    background: var(--color-cool-5-75);
+    border-radius: 50%;
+    border: 2px solid var(--rpg-styled-ui-color);
+    box-shadow: var(--glassy) 0px 0px 10px 0px;
+}
+body.pathfinderui-v3 #hotbar .macro.active:hover {
+    border: 2px solid var(--color-warm-2);
+}
+body.pathfinderui-v3 .hotbar-page {
+    width: calc(var(--hotbar-width) + 72px);
+}
+body.pathfinderui-v3 #action-bar:not(.collapsed)::before {
+    position: absolute;
+    z-index: -1;
+    content: " ";
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 85px;
+    background-image: url(../ui/frames/action_bar.webp);
+    background-size: 100% 85px;
+    background-repeat: no-repeat;
+}
+body.pathfinderui-v3 #hotbar .macro:hover {
+    box-shadow: 0 0 10px var(--color-shadow-highlight) inset!important;
+}
+body.pathfinderui-v3 #hotbar .macro .macro-key {
+    top: initial;
+    bottom: -6px;
+    right: -8px;
+    z-index: 3;
+    color: var(--red-light);
+    background: none;
+    text-shadow: var(--text-shadow);
+}
+body.pathfinderui-v3 #hotbar .macro .macro-icon {
+    position: relative;
+    z-index: 2;
+    border-radius: 50%;
+}
+body.pathfinderui-v3 #hotbar #macro-list {
+    grid-gap: 8px;
+    border:none;
+}
+body.pathfinderui-v3 #hotbar .bar-controls {
+    color: var(--rpg-styled-ui-color);
+    background: unset;
+    border: unset;
+    box-shadow: unset;
+    text-shadow: var(--text-shadow);
+}
+
+/* CONTROLS */
+body.pathfinderui-v3 #controls {
+    padding: 10px 15px;
+}
+body.pathfinderui-v3 #controls ol .scene-control,
+body.pathfinderui-v3 #controls ol .control-tool {
+    background: none;
+    box-shadow: none;
+    border: none;
+    color: var(--rpg-styled-ui-color);
+}
+
+body.pathfinderui-v3 #controls ol .scene-control.active,
+body.pathfinderui-v3 #controls ol .control-tool.active,
+body.pathfinderui-v3 #controls ol .scene-control:hover,
+body.pathfinderui-v3 #controls ol .control-tool:hover {
+    color: var(--pfui-main-color)!important;
+    background: url(../ui/buttons/controls_btn_accent.webp);
+    border-color: transparent !important;
+    box-shadow: none!important;
+}
+
+body.pathfinderui-v3 #controls ol .scene-control.active:before,
+body.pathfinderui-v3 #controls ol .control-tool.active:before,
+body.pathfinderui-v3 #controls ol .scene-control:hover:before,
+body.pathfinderui-v3 #controls ol .control-tool:hover:before {
+    background: url(../ui/buttons/controls_btn_accent.webp);
+    background-size: 100% 100%;
+}
+
+body.pathfinderui-v3 #controls ol > li {
+    position: relative;
+}
+
+body.pathfinderui-v3 #controls ol > li.scene-control:before,
+body.pathfinderui-v3 #controls ol > li.control-tool:before
+{
+    position: absolute;
+    left: -9%;
+    top: -15%;
+
+    content: " ";
+    width: 130%;
+    height: 130%;
+
+    background: url(../ui/buttons/controls_btn.webp);
+    background-size: 100% 100%;
+    z-index: -2;
+    opacity: 0.88;
+}
+body.pathfinderui-v3 .application .controls-dropdown.expanded {
+    box-shadow: unset;
+    background: unset;
+}
+
+/* DIALOG */
+body.pathfinderui-v3 .dialog-content textarea {
+    color: #cfbda7;
+    background: #ffffff14;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+body.pathfinderui-v3 .app.window-app.chat-popout .window-header {
+    background: rgba(6, 4, 3, 0.92);
+}
+
+body.pathfinderui-v3 .app.window-app.chat-popout .window-content {
+    background: #8C6857;
+    background-size: 100% 100%;
+}
+
+body.pathfinderui-v3 .app.window-app.chat-popout .window-content .chat-message {
+    background: rgba(6, 4, 3, 0.92);
+}
+body.pathfinderui-v3 .app.window-app,
+body.pathfinderui-v3 .app.window-app.dialog,
+body.pathfinderui-v3 .app.window-app.folder-edit {
+    background: rgba(6, 4, 3, 0.92);
+    border-image-source: url(../ui/frames/input_border.webp);
+    border-image-slice: 5 20 20 20 fill;
+    border-image-repeat: repeat repeat;
+    border-image-width: auto;
+    border-image-outset: 2px 2px 2px 2px;
+    border-radius: 0;
+}
+
+body.pathfinderui-v3 .window-app.dialog .window-content,
+body.pathfinderui-v3 .window-app.folder-edit .window-content {
+    color: var(--pfui-main-grey-color);
+    background: none;
+    backdrop-filter: blur(5px);
+}
+
+body.pathfinderui-v3 .window-app.dialog .window-header,
+body.pathfinderui-v3 .window-app .window-header {
+    background: unset;
+    box-shadow: unset;
+    border: none;
+    color: var(--pfui-main-color);
+}
+body.pathfinderui-v3 .window-app .window-header::after,
+body.pathfinderui-v3 .window-app.dialog .window-header::after,
+body.pathfinderui-v3 .window-app.folder-edit .window-header::after {
+    position: absolute;
+    z-index: -1;
+    content: " ";
+    width: 100%;
+    height: 45px;
+    left: 0;
+    top: -7px;
+    background: url(../ui/frames/header.webp);
+    background-size: 100% 45px;
+}
+body.pathfinderui-v3 .dialog button, 
+body.pathfinderui-v3 .folder-edit button, 
+body.pathfinderui-v3 .application button, 
+body.pathfinderui-v3 .application a.button, 
+body.pathfinderui-v3 .roll-modifiers-dialog .roll, 
+body.pathfinderui-v3 .dialog .dialog-buttons button, 
+body.pathfinderui-v3 .dialog .dialog-buttons button.default, 
+body.pathfinderui-v3 .dialog .dialog-buttons button:last-child, 
+body.pathfinderui-v3 .application .window-header button.header-control {
+    font-weight: 600;
+    color: var(--pfui-main-grey-color);
+    background: var(--color-warm-3);
+    border: 1px solid transparent;
+    text-shadow: var(--text-shadow);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+}
+body.pathfinderui-v3 .dialog button:hover, 
+body.pathfinderui-v3 .folder-edit button:hover, 
+body.pathfinderui-v3 .application button:hover, 
+body.pathfinderui-v3 .application a.button:hover, 
+body.pathfinderui-v3 .dialog-buttons button:hover, 
+body.pathfinderui-v3 .roll-modifiers-dialog .roll:hover, 
+body.pathfinderui-v3 .dialog .dialog-buttons button.default:hover, 
+body.pathfinderui-v3 .dialog .dialog-buttons button:last-child:hover, 
+body.pathfinderui-v3 .application .window-header button.header-control:hover {
+    border: none;
+    background: none;
+    background-color: var(--green) !important;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 2px rgba(0, 0, 0, 0.4);
+    transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+    text-shadow: var(--text-shadow) !important;
+    color: var(--color-cool-5) !important;
+    border-radius: var(--border-radius);
+}
+
+body.pathfinderui-v3 .folder-edit form .form-group label,
+body.pathfinderui-v3 .folder-edit form .form-group label {
+    color: var(--pfui-main-color);
+}
+body.pathfinderui-v3 .dialog .dialog-buttons {
+    border: none;
+}
+body.pathfinderui-v3 .dialog button:hover::after,
+body.pathfinderui-v3 .folder-edit button:hover::after {
+    opacity: 1;
+}
+body.pathfinderui-v3 .dialog input,
+body.pathfinderui-v3 .folder-edit input {
+    border: none;
+   color: #ddc5b9;
+    background: #ffffff14;
+}
+
+body.pathfinderui-v3 :root .damage.color.bludgeoning, 
+body.pathfinderui-v3 :root .damage.color.piercing, 
+body.pathfinderui-v3 :root .damage.color.slashing {
+    --color-bg-physical: rgba(132, 132, 132, 0.125);
+    background-color: var(--color-bg-physical);
+    --color-border-physical: #737272;
+    border-color: var(--color-border-physical);
+    --color-text-physical: #a0a0a0;
+    color: var(--color-text-physical);
+}
+body.pathfinderui-v3 .roll-modifiers-dialog .toggle {
+    --secondary: var(--color-cool-3);
+    background: var(--secondary);
+}
+body.pathfinderui-v3 .roll-modifiers-dialog .dialog-row.disabled .toggle {
+    background: var(--red-light);
+}
+body.pathfinderui-v3 .dialog input:focus,
+body.pathfinderui-v3 .folder-edit input:focus {
+    box-shadow: none;
+    outline: 1px solid #584a75;
+}
+body.pathfinderui-v3 input[type="checkbox"]:checked,
+body.pathfinderui-v3 input[type="radio"]:checked {
+    accent-color: var(--green);
+}
+body.pathfinderui-v3 input[type="checkbox"]:checked:hover {
+    accent-color: var(--color-warm-2);
+}
+
+body.pathfinderui-v3 .dialog select,
+body.pathfinderui-v3 .folder-edit select,
+body.pathfinderui-v3 #generate-check-prompt .dialog-content tags.tagify {
+    border: 0;
+    background: var(--rpg-styled-ui-color);
+}
+
+body.pathfinderui-v3 .folder-edit input[type="color"][data-edit][data-edit] {
+    border: none;
+    color: #ddc5b9;
+    background: #ffffff14;
+}
+
+/* ACTOR AND ITEM */
+body.pathfinderui-v3 button#roll-hd {
+    position: relative;
+    color: var(--pfui-main-color);
+    border: none;
+}
+
+body.pathfinderui-v3 button#roll-hd:hover,body.pathfinderui-v3 button#roll-hd:active{
+    box-shadow: none;
+}
+
+body.pathfinderui-v3 button#roll-hd::before {
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 140%;
+    top: -20%;
+    left: 0%;
+    background: url(../ui/buttons/btn-dnd5e-card.webp);
+    background-size: 100% 100%;
+    z-index: -1;
+}
+body.pathfinderui-v3 button#roll-hd:hover::before {
+    background: url(../ui/buttons/btn-dnd5e-card_hover.webp);
+    background-size: 100% 100%;
+}
+
+/* NAVIGATION */
+body.pathfinderui-v3 #ui-top {
+    width: 100%;
+}
+
+body.pathfinderui-v3 scene-navigation #nav-toggle {
+    background: none;
+    border: none;
+}
+
+body.pathfinderui-v3 scene-navigation .scene {
+    margin: 0 14px 8px 0;
+    float: left;
+    border: none;
+    background: none;
+    min-width: 80px;
+    text-align: center;
+    position: relative;
+    color: var(--pfui-main-color);
+    text-shadow: var(--text-shadow);
+    font-weight: 600;
+}
+
+body.pathfinderui-v3 scene-navigation.vertical .scene {
+    float: none;
+    width: fit-content;
+    display: table;
+}
+
+body.pathfinderui-v3 #nav-toggle {
+    width: 36px;
+    height: 36px;
+    color: var(--pfui-main-color);
+}
+
+body.pathfinderui-v3 #nav-toggle::after {
+    position: absolute;
+    content: " ";
+    width: 50px;
+    height: 50px;
+    left: -8px;
+    top: -9px;
+    background: url(../ui/buttons/controls_btn.webp);
+    background-size: 100% 100%;
+    z-index: -2;
+    opacity: 0.88;
+}
+
+
+body.pathfinderui-v3 scene-navigation .scene::before {
+    position: absolute;
+    content: " ";
+    width: 120%;
+    height: 130%;
+    top: -15%;
+    background: url(../ui/buttons/controls_btn.webp);
+    background-size: 100% 100%;
+    z-index: -1;
+    left: -10%;
+    opacity: 0.88;
+}
+body.pathfinderui-v3 scene-navigation .scene.active {
+    color: var(--color-warm-1);
+    background: url(../ui/buttons/controls_btn_active.webp);
+    background-size: 100% 100%;
+    border: none;
+    text-shadow: var(--text-shadow);
+}
+body.pathfinderui-v3 scene-navigation .scene.active.view {
+    color: var(--color-warm-1);
+    background: url(../ui/buttons/controls_btn_active_view_gm.webp);
+    background-size: 100% 100%;
+    border: none;
+    text-shadow: var(--text-shadow);
+}
+body.pathfinderui-v3 scene-navigation .scene.view.gm {
+    color: var(--color-warm-1);
+    background: url(../ui/buttons/controls_btn_view_gm.webp);
+    background-size: 100% 100%;
+    border: none;
+    text-shadow: var(--text-shadow);
+}
+body.pathfinderui-v3 scene-navigation .scene.view {
+    color: var(--color-warm-1);
+    background: url(../ui/buttons/controls_btn_active_view_gm.webp);
+    background-size: 100% 100%;
+    border: none;
+    text-shadow: var(--text-shadow);
+}
+body.pathfinderui-v3 scene-navigation .scene.gm {
+    background: url(../ui/buttons/controls_btn_accent.webp);
+    background-size: 100% 100%;
+    border: none;
+    text-shadow: var(--text-shadow);
+}
+body.pathfinderui-v3 scene-navigation .scene:hover,
+body.pathfinderui-v3 scene-navigation .scene.active:hover,
+body.pathfinderui-v3 scene-navigation .scene.active.view:hover,
+body.pathfinderui-v3 scene-navigation .scene.view.gm:hover,
+body.pathfinderui-v3 scene-navigation .scene.view:hover {
+    color: var(--green);
+    text-shadow: var(--text-shadow);
+}
+body.pathfinderui-v3 scene-navigation .scene.view,
+body.pathfinderui-v3 scene-navigation .scene.context {
+    box-shadow: none;
+}
+
+
+
+/* PLAYERS */
+
+body.pathfinderui-v3 #players {
+    background: none;
+    border: none;
+    box-shadow: none;
+    bottom: 25px;
+    left: 25px;
+}
+
+body.pathfinderui-v3 #players h3 .players-mode {
+    position: relative;
+    float: right;
+    top: 10px;
+    right: -12px;
+}
+
+body.pathfinderui-v3 #players h3 .players-mode::after {
+    position: absolute;
+    content: " ";
+    width: 34px;
+    height: 32px;
+    top: -7px;
+    background: url(../ui/buttons/players_btn.webp);
+    background-size: 100% 100%;
+    z-index: -1;
+    opacity: 0.6;
+    left: -11px;
+}
+
+body.pathfinderui-v3 #players h3 {
+    position: relative;
+    color: #e9e9da;
+    border-bottom: none;
+    font-family: 'Kurale', serif;
+    font-weight: 800;
+
+    text-shadow: 2px 0 0 var(--border-color),
+                -2px 0 0 var(--border-color),
+                0 2px 0 var(--border-color),
+                0 -2px 0 var(--border-color),
+                1px 1px var(--border-color),
+                -1px -1px 0 var(--border-color),
+                1px -1px 0 var(--border-color),
+                -1px 1px 0 var(--border-color);
+}
+
+body.pathfinderui-v3 #players h3::before {
+    position: absolute;
+    content: " ";
+    width: 120%;
+    height: 130%;
+    top: -15%;
+    background: url(../ui/frames/players_header.webp);
+    background-size: 100% 100%;
+    z-index: -1;
+    left: -10%;
+}
+
+body.pathfinderui-v3 #players ol {
+    position: relative;
+    font-family: 'Kurale', serif;
+    font-weight: 400;
+}
+
+body.pathfinderui-v3 #players ol::before {
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 100%;
+    background: url(../ui/frames/players_bg_dark.webp);
+    background-size: 100% 100%;
+    z-index: -1;
+    left: -10%;
+}
+
+body.pathfinderui-v3 #players ol li.player {
+    text-shadow: 2px 0 0 var(--border-color),
+    -2px 0 0 var(--border-color),
+    0 2px 0 var(--border-color),
+    0 -2px 0 var(--border-color),
+    1px 1px var(--border-color),
+    -1px -1px 0 var(--border-color),
+    1px -1px 0 var(--border-color),
+    -1px 1px 0 var(--border-color);
+}
+
+/*************************************************************/
+/*======================== Playlist =========================*/
+/*************************************************************/
+body.pathfinderui-v3 .playlists-sidebar h4 {
+    text-shadow: (var(--text-shadow));
+}
+body.pathfinderui-v3 input[type=range]::-webkit-slider-runnable-track {
+    box-shadow: unset;
+    border-radius: 3px;
+    background: var(--color-cool-5);
+    border: 1px solid var(--color-cool-4);
+}
+body.pathfinderui-v3 input[type=range]:focus::-webkit-slider-runnable-track {
+    background: linear-gradient(90deg, var(--green)33%, var(--red-light));
+}
+body.pathfinderui-v3 input[type=range]::-webkit-slider-thumb {
+    border-radius: 50%;
+    box-shadow: unset;
+}
+body.pathfinderui-v3 input[type=range]:disabled::-webkit-slider-thumb {
+    background: var(--color-cool-3);
+    border: 1px solid var(--color-cool-4);
+    background: var(--color-cool-4);
+    border: 1px solid var(--color-cool-3);
+}
+body.pathfinderui-v3 input[type=range]:not(:disabled)::-webkit-slider-thumb {
+    background: var(--color-warm-2);
+    border: 1px solid var(--color-warm-1);
+    transition: outline 0.15s;
+}
+body.pathfinderui-v3 input[type=range]:not(:disabled)::-webkit-slider-thumb:hover {
+    background: var(--color-warm-3);
+}
+body.pathfinderui-v3 .playlists-sidebar .sound-control[data-action="sound-stop"] {
+    color: var(--color-warm-2);
+    transition: outline 0.15s;
+}
+body.pathfinderui-v3 .playlists-sidebar .sound-control[data-action="sound-stop"]:hover {
+    color: var(--color-warm-1);
+}
+body.pathfinderui-v3 .playlists-sidebar .sound-control {
+    color: var(--green);
+    transition: outline 0.15s;
+}
+body.pathfinderui-v3 .playlists-sidebar .sound-control:hover {
+    color: var(--color-warm-2);
+}

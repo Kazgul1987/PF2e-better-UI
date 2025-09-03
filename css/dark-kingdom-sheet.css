@@ -1,0 +1,670 @@
+/* A bunch of disgusting CSS overrides that hit the system's CSS like a hammer to remove as much colour as possible */
+
+.dark-kingdom-theme {
+    --pfui-main-color: #cfbda7;
+    --pfui-main-grey-color: #98968a;
+    --green: #91a82a;
+    --blue: #171f69;
+    --red: #5e0000;
+    --red-light:#ff0000;
+    --custom-trait:#61180e;
+    --border-radius: 3px;
+    --background: #100d0d;
+    --background-2: #ffffff14;
+    --highlight: 0 0 0 1px var(--pfui-main-color), 0 0 0 2px #93d1d3, inset 0 0 4px rgba(255, 255, 255, 0.25);
+    --glass-bg: rgba(20, 20, 20, 0.6);
+    --glass-bg-light: rgba(255, 255, 255, 0.1);
+    --glass-bg-light-2: #3f342b;
+    --glass-bg-dark: rgba(0, 0, 0, 0.7);
+    --glassy: 0px 0px 3px 0px rgba(255, 255, 255, 0.4) inset, 0px 0px 2px 1px rgba(0, 0, 0, 1), 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    --glassy-sharp: 0px 0px 0px 1px rgba(255, 255, 255, 0.4) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8);
+    --glassy-sharp-highlight: 0px 0px 0px 1px rgba(245, 222, 179, 0.7) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8);
+	--primary-remaster: hsl(153, 100%, 8%);
+	--primary-light-remaster: hsl(170, 96%, 19%);
+    --ornement : url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:wheat;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='0.75'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    
+
+    --primary: var(--red);
+    --secondary: var(--blue);
+    --tertiary: var(--pfui-main-color);
+    --tertiary-dark: var(--pfui-main-color);
+    --tertiary-light: var(--pfui-main-color);
+    --body: var(--pfui-main-color);
+    --text-dark: var(--pfui-main-color);
+    --text-light: var(--pfui-main-color);
+    --sidebar-label: var(--pfui-main-color);
+    --sidebar-title: var(--pfui-main-color);
+    
+    --alt: #786452;
+    --sub: var(--background);
+
+    /*--color-rarity-common: #7e7e7e;*/
+    --color-rarity-common: var(--color-cool-1);
+    --color-rarity-uncommon: #ff6400;
+    --color-rarity-rare: #0062ff;
+    --color-rarity-unique: #e127e1;
+        
+/* Foundry2
+====================================================== */
+    --color-light-1: #f7f3e8;
+    --color-light-1-90: #f7f3e890;
+    --color-light-2: #efe6d8;
+    --color-light-2-90: #efe6d890;
+    --color-light-3: #e7d1b1;
+    --color-light-3-90: #e7d1b190;
+    --color-light-4: #d0b8a3;
+    --color-light-4-90: #d0b8a390;
+    --color-light-5: #9f8475;
+    --color-light-5-90: #9f847590;
+    --color-light-6: #816b66;
+    --color-light-6-90: #816b6690;
+    --color-warm-1: #ee9b3a;
+    --color-warm-1-90: #ee9b3a90;
+    --color-warm-2: #c9593f;
+    --color-warm-2-90: #c9593f90;
+    --color-warm-3: #5d142b;
+    --color-warm-3-90: #5d142b90;
+    --color-warm-4: #420418;
+    --color-warm-4-90: #42041890;
+    --color-warm-5: #26020d;
+    --color-warm-5-90: #26020d90;
+    --color-cool-1: #b1a0d4;
+    --color-cool-1-90: #b1a0d490;
+    --color-cool-2: #79689c;
+    --color-cool-2-90: #79689c90;
+    --color-cool-3: #584a75;
+    --color-cool-3-90: #584a7590;
+    --color-cool-4: #302831;
+    --color-cool-4-90: #30283190;
+    --color-cool-5: #0b0a13;
+    --color-cool-5-25: rgba(11, 10, 19, 0.25);
+    --color-cool-5-50: rgba(11, 10, 19, 0.5);
+    --color-cool-5-75: rgba(11, 10, 19, 0.75);
+    --color-cool-5-90: rgba(11, 10, 19, 0.9);
+
+    --color-level-error: #ce0707;
+    --color-level-error-bg: rgba(105, 0, 8, 0.8);
+    --color-level-error-border: #750003;
+    --color-level-info: #59a1f6;
+    --color-level-info-bg: rgba(47, 80, 132, 0.8);
+    --color-level-info-border: #5c87b9;
+    --color-level-success: #26b231;
+    --color-level-success-bg: rgba(26, 107, 34, 0.8);
+    --color-level-success-border: #1b8f23;
+    --color-level-warning: #ee9b3a;
+    --color-level-warning-bg: rgba(214, 150, 0, 0.8);
+    --color-level-warning-border: #b18404;
+    --color-scrollbar: #5d142b;
+    --color-scrollbar-border: #8d151b;
+}
+
+
+/*Kingdom-sheet-builder
+/************************/
+.sheet.kingdom-builder .window-header .window-title {
+    color: var(--pfui-main-color);
+}
+.sheet.kingdom-builder .window-header {
+    box-shadow: var(--box-shadow);
+    background-color: var(--glass-bg-dark);
+    border-radius: var(--border-radius);
+    backdrop-filter: blur(5px);
+    text-shadow: 0 0 8px var(--color-shadow-primary);
+    margin: 0px 0px 2px 0px;
+}
+.sheet.kingdom-builder .window-header a {
+    color: var(--pfui-main-color);
+}
+.sheet.kingdom-builder .window-content {
+    color: var(--pfui-main-color);
+    background: none;
+    box-shadow: none;
+    margin: unset;
+    backdrop-filter: blur(5px);
+}
+.sheet.kingdom-builder form {
+    color: var(--pfui-main-color);
+    background: none;
+    backdrop-filter: blur(5px);
+}
+.sheet.kingdom-builder form > nav a:not(.active) {
+    background-color: var(--background-2);
+}
+.sheet.kingdom-builder form > nav a.active {
+    background-color: var(--color-cool-5-25);
+}
+.sheet.kingdom-builder .build-element {
+    background-color: var(--color-cool-5-25);
+}
+.sheet.kingdom-builder .ability-builder {
+    background-color: var(--color-cool-5-90);
+}
+.sheet.kingdom-builder .build-element .selection {
+    color: var(--pfui-main-color);
+    border: none;
+    background: none;
+    background-color: var(--glass-bg-dark);
+    box-shadow: var(--box-shadow);
+    text-shadow: 0 0 3px black;
+    border-radius: var(--border-radius);
+}
+.sheet.kingdom-builder button.complete {
+    color: var(--pfui-main-color);
+    background: radial-gradient( var(--primary-light-remaster), var(--primary-remaster));
+    border-radius: var(--border-radius);
+    box-shadow: var(--glassy-shadow);
+    border: unset;
+}
+.sheet.kingdom-builder button.complete:hover {
+    color: var(--background);
+    background: var(--green);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 2px rgba(0, 0, 0, 0.4);
+    border-radius: var(--border-radius);
+    animation: glow 0.75s infinite alternate;
+}
+.sheet.kingdom-builder .build-element .choices .choice img {
+filter: grayscale(0.75);
+}
+.sheet.kingdom-builder .build-element .choices .choice.selected img, 
+.sheet.kingdom-builder .build-element .choices .choice:hover img {
+    box-shadow: 0 0 1px var(--green);
+    filter: drop-shadow(1px 2px 5px var(--green)) brightness(1) ;
+}
+.sheet.kingdom-builder .build-element .choices .choice.selected, 
+.sheet.kingdom-builder .build-element .choices .choice:hover {
+    text-shadow: none;
+    filter: drop-shadow(1px 2px 5px var(--green));
+}
+.sheet.kingdom-builder .build-element .build-entry-boosts .tag {
+    color: var(--pfui-main-color);
+    border: none;
+    background: none;
+    background-color: var(--color-cool-5-90);
+    box-shadow: var(--box-shadow);
+    text-shadow: 0 0 3px black;
+    border-radius: var(--border-radius);
+}
+
+/*Government*/
+.sheet.kingdom-builder a.content-link, 
+.sheet.kingdom-builder a.inline-roll {
+    font-family: "Good OT";
+    color: var(--pfui-main-color);
+    background: var(--custom-trait);
+    padding: 0px 3px;
+    border: 1px solid var(--glassy);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+}
+
+/*Ability Scores*/
+.sheet.kingdom-builder .ability-builder .title {
+    color: var(--color-warm-1);
+}
+.sheet.kingdom-builder .ability-builder .summary-row .hint-container {
+    color: var(--pfui-main-color);
+    border: none;
+    background: none;
+    background-color: var(--glass-bg-dark);
+    box-shadow: var(--box-shadow);
+    text-shadow: 0 0 3px black;
+    border-radius: var(--border-radius);
+}
+.sheet.kingdom-builder .ability-builder .summary-row .hint-container h3 {
+    color: var(--color-warm-1);
+}
+.sheet.kingdom-builder hr {
+    border: none;
+    border-top: 1px dotted var(--color-underline-header);
+    border-bottom: 1px dotted var(--color-underline-header);
+}
+.sheet.kingdom-builder .ability-builder .summary-row .hint-container .aspiration select {
+    color: var(--pfui-main-color);
+    border: none;
+    background: none;
+    background-color: var(--color-cool-5-90);
+    box-shadow: var(--box-shadow);
+    text-shadow: 0 0 3px black;
+    border-radius: var(--border-radius);
+}
+.sheet.kingdom-builder .ability-builder .summary-row .hint-container .aspiration select option, 
+.sheet.kingdom-builder .ability-builder .summary-row .hint-container .aspiration select optgroup {
+    background: var(--glass-bg-dark) ;
+}
+.sheet.kingdom-builder .ability-builder .summary-row .row-column input {
+    color: darkgray;
+    filter: drop-shadow(1px 2px 5px var(--red));
+}
+.sheet.kingdom-builder .ability-builder .summary-row .row-column .value {
+    color: darkgray;
+    filter: drop-shadow(1px 2px 5px var(--red));
+}
+.sheet.kingdom-builder .ability-builder h4 {
+    color: var(--green);
+}
+.sheet.kingdom-builder button.complete:disabled {
+    color: var(--pfui-main-color);
+    border: none;
+    background: none;
+    background-color: var(--color-cool-5-90);
+    box-shadow: var(--box-shadow);
+    text-shadow: 0 0 8px var(--color-shadow-primary);
+    border-radius: var(--border-radius);
+    filter: drop-shadow(0px 0px 0px var(--red));
+}
+.sheet.kingdom-builder .ability-builder .row-column button.selected {
+    color: var(--pfui-main-color);
+    background: var(--button-color);
+    box-shadow: var(--box-shadow);
+}
+.sheet.kingdom-builder .ability-builder .row-column button:hover {
+    color: var(--background);
+    background: var(--green);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 2px rgba(0, 0, 0, 0.4);
+    border-radius: var(--border-radius);
+}
+
+
+
+
+
+/*Kingdom-sheet     
+/************************/
+.dark-kingdom-theme.sheet.kingdom .window-content {
+    color: var(--pfui-main-color);
+    background: none;
+    box-shadow: none;
+    margin: unset;
+    backdrop-filter: blur(5px);
+}
+.dark-kingdom-theme.sheet.kingdom .window-resizable-handle i.fas {
+    border: none;
+    background: none;
+    color: var(--green);
+}
+.dark-kingdom-theme.sheet.kingdom form > header .details .fame .pips i.fa-solid.fa-circle {
+    color: var(--color-warm-1);
+}
+.dark-kingdom-theme.sheet.kingdom .window-resizable-handle {
+    border: none;
+    background: none;
+}
+.dark-kingdom-theme.sheet.kingdom form > header .frame-container .player-image {
+    box-shadow: none;
+}
+.dark-kingdom-theme.sheet.kingdom form {
+    background: none;
+}
+.dark-kingdom-theme.sheet.kingdom .sidebar {
+    border: none;
+}
+.dark-kingdom-theme.sheet.kingdom form > header {
+    color: var(--pfui-main-color);
+    background: radial-gradient(var(--primary-remaster), transparent);
+    box-shadow: 0 0 6px inset var(--glass-bg-light-2);
+    border-radius: var(--border-radius);
+}
+.dark-kingdom-theme.sheet.kingdom form > header .details input[type=text], 
+.dark-kingdom-theme.sheet.kingdom form > header .details input[type=number] {
+    background: none;
+}
+.dark-kingdom-theme.sheet.kingdom form > header .details .name {
+    color: var(--pfui-main-color);
+    background: radial-gradient(var(--background-2), transparent);
+    text-shadow: 0 0 8px var(--color-shadow-primary);
+    border-radius: var(--border-radius);
+}
+.dark-kingdom-theme.sheet.kingdom form > header input[type=text]:not(:disabled):hover, 
+.dark-kingdom-theme.sheet.kingdom form > header input[type=text]:focus, 
+.dark-kingdom-theme.sheet.kingdom form > header input[type=number]:not(:disabled):hover, 
+.dark-kingdom-theme.sheet.kingdom form > header input[type=number]:focus {
+    border: none;
+    text-shadow: 0 0 8px var(--color-shadow-primary);
+    box-shadow: none;
+}
+.dark-kingdom-theme.sheet.kingdom nav.sub-nav {
+    border: 1px dotted var(--background-2);
+    background: radial-gradient(var(--primary-remaster), transparent);
+    border-radius: var(--border-radius);
+}
+.dark-kingdom-theme.sheet.kingdom nav.sub-nav a.active, 
+.dark-kingdom-theme.sheet.kingdom nav.sub-nav .tab.active {
+    color: var(--green);
+}
+.dark-kingdom-theme.sheet.kingdom nav.sub-nav a, 
+.dark-kingdom-theme.sheet.kingdom nav.sub-nav .tab {
+    color: var(--pfui-main-color);
+}
+.dark-kingdom-theme.sheet.kingdom [data-visibility]:not([data-visibility=all])[data-visibility=gm] {
+    font-style: italic;
+    color: var(--pfui-main-color);
+    background: var(--color-warm-3);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border: none;
+}
+.dark-kingdom-theme.sheet.kingdom [data-visibility]:not([data-visibility=all]) {
+    outline: none;
+    padding: 2px;
+}
+.dark-kingdom-theme.sheet.kingdom [data-pf2-effect-area] {
+    font-family: "Good OT";
+    color: var(--pfui-main-color);
+    background: var(--custom-trait);
+    padding: 0px 3px;
+    border: 1px solid var(--glassy);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+}
+.dark-kingdom-theme.sheet.kingdom a.inline-check[data-pf2-traits*=secret], 
+.dark-kingdom-theme.sheet.kingdom span[data-pf2-check][data-pf2-traits*=secret] {
+    font-family: "Good OT";
+    color: var(--pfui-main-color);
+    background: var(--custom-trait);
+    padding: 0px 3px;
+    border: 1px solid var(--glassy);
+    border-radius: var(--border-radius);
+}	
+.dark-kingdom-theme.sheet.kingdom a.inline-check, 
+.dark-kingdom-theme.sheet.kingdom span[data-pf2-check] {
+    font-family: "Good OT";
+    color: var(--pfui-main-color);
+    background: var(--custom-trait);
+    padding: 0px 3px;
+    border: 1px solid var(--glassy);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+}
+.dark-kingdom-theme.sheet.kingdom a.inline-check, 
+.dark-kingdom-theme.sheet.kingdom span[data-pf2-action] {
+    font-family: "Good OT";
+    color: var(--pfui-main-color);
+    background: var(--custom-trait);
+    padding: 0px 3px;
+    border: 1px solid var(--glassy);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+}
+.dark-kingdom-theme.sheet.kingdom a.content-link, 
+.dark-kingdom-theme.sheet.kingdom a.inline-roll {
+    font-family: "Good OT";
+    color: var(--pfui-main-color);
+    background: var(--custom-trait);
+    padding: 0px 3px;
+    border: 1px solid var(--glassy);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+}
+
+
+
+/*        Main     
+*************************/
+.dark-kingdom-theme.sheet.kingdom section.major > header {
+    color: var(--color-warm-1);
+    border-bottom: 1px dotted var(--color-underline-header);
+}
+.dark-kingdom-theme.sheet.kingdom section.major > header button {
+    background: radial-gradient( var(--primary-light-remaster), var(--primary-remaster));
+    border: 1px dotted var(--color-underline-header);
+    color: var(--color-warm-1);
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=main] .resources .resource-data {
+    border: none;
+    background: none;
+    background-color: var(--color-cool-5-90);
+    box-shadow: var(--box-shadow);
+    text-shadow: 0 0 3px black;
+    border-radius: var(--border-radius);
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=main] .resources input[type=number] {
+    color: var(--pfui-main-grey-color);
+    border: none;
+    background: none;
+    background-color: var(--color-cool-5-90);
+    box-shadow: var(--box-shadow);
+    box-shadow: 0 0 6px inset var(--glass-bg-light-2);
+    border-radius: var(--border-radius);
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=main] .leaders .leader {
+    color: var(--green);
+    border: none;
+    background: none;
+    background-color: var(--color-cool-5-90);
+    box-shadow: var(--box-shadow);
+    text-shadow: 0 0 3px black;
+    border-radius: var(--border-radius);
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=main] .leaders .leader .image {
+    border: none;
+    background: none;
+    background-color: var(--color-cool-5-90);
+    box-shadow: var(--box-shadow);
+    box-shadow: 0 0 6px inset var(--glass-bg-light-2);
+    border-radius: var(--border-radius);
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=main] .leaders .leader .details {
+    color: var(--pfui-main-color);
+    background: radial-gradient(var(--primary-remaster), transparent);
+    box-shadow: 0 0 6px inset var(--glass-bg-light-2);
+    border-radius: var(--border-radius);
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=main] .ability-scores .ability {
+    border: none;
+    background: none;
+    background-color: var(--color-cool-5-90);
+    box-shadow: var(--box-shadow);
+    text-shadow: 0 0 3px black;
+    border-radius: var(--border-radius);
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=main] .ability-scores .ability .score {
+    background: radial-gradient( var(--primary-light-remaster), var(--primary-remaster));
+    border: 1px dotted var(--glass-bg-light-2);
+    color: var(--color-warm-1);
+    box-shadow: 0 0 6px inset var(--glass-bg-light-2);
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=main] input[type=text], 
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=main] input[type=number] {
+    color: var(--pfui-main-grey-color);
+    background: none;
+    background-color: var(--color-cool-5-90);
+    box-shadow: var(--box-shadow);
+    text-shadow: 0 0 3px black;
+    border-radius: var(--border-radius);
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=main] .ability-scores .ability .corruption-section .progress {
+    background: radial-gradient( var(--primary-light-remaster), var(--primary-remaster));
+    border: 1px dotted var(--glass-bg-light-2);
+    box-shadow: 0 0 6px inset var(--glass-bg-light-2);
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=main] .ability-scores .ability .corruption-section .progress::after {
+    background-color: var(--color-warm-1);
+}
+
+
+
+/*     Activities     
+*************************/
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=activities] .skills .control-dc {
+    color: var(--pfui-main-grey-color);
+    background: none;
+    background-color: var(--color-cool-5-90);
+    box-shadow: var(--box-shadow);
+    text-shadow: 0 0 3px black;
+    border-radius: var(--border-radius);
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=activities] .skills .control-dc .mod {
+    color: var(--green);
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=activities] .skills .skill {
+    border-bottom: 1px dotted var(--background-2);
+    background: radial-gradient(var(--background-2), transparent);
+    border-radius: var(--border-radius);
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=activities] .skills .skill .mod {
+    color: var(--green);
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=activities] .skills .skill .name {
+    color: var(--pfui-main-grey-color);
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=activities] .skills .skill .button-group .small-button {
+    color: var(--background);
+    background: var(--green);
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=activities] .actions .phase-summary {
+    border-bottom: 1px dotted var(--background-2);
+    background: radial-gradient(var(--background-2), transparent);
+    border-radius: var(--border-radius);
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=activities] .actions .phase-summary header {
+    color: var(--color-warm-1);
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=activities] .actions .action {
+    color: var(--pfui-main-grey-color);
+    border-bottom: 1px dotted var(--background-2);
+    background: radial-gradient(var(--background-2), transparent);
+    border-radius: var(--border-radius);
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=activities] .actions .action .item-summary {
+    color: var(--pfui-main-color);
+}
+.sheet.kingdom .tab.active[data-tab=activities] .actions .action .item-name:hover {
+    color: var(--green);
+}
+.dark-kingdom-theme.sheet.kingdom .tags .tag, .dark-kingdom-theme.sheet.kingdom .tags .tag option {
+    font-family: "Good OT";
+    color: var(--pfui-main-color);
+    background: var(--custom-trait);
+    padding: 0px 3px;
+    border: 1px solid var(--glassy);
+    border-radius: var(--border-radius);
+    filter: brightness(1.3);
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=activities] .actions header .filters .choice {
+    font-family: "Good OT";
+    color: var(--pfui-main-color);
+    background: var(--custom-trait);
+    padding: 0px 3px;
+    border: 1px solid var(--glassy);
+    border-radius: var(--border-radius);
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=activities] .actions header .filters .choice.active {
+    filter: brightness(1.3);
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=activities] .actions header .filters .choice:hover {
+    filter: brightness(2);
+}
+
+
+
+/*        World     
+*************************/
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=world] .settlement {
+    color: var(--pfui-main-color);
+    border-bottom: 1px dotted var(--background-2);
+    background: radial-gradient(var(--background-2), transparent);
+    border-radius: var(--border-radius);
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=world] .settlement .item-name .name {
+    color: var(--pfui-main-color);
+    border: none;
+    background: radial-gradient(var(--background-2), transparent);
+    text-shadow: 0 0 3px black;
+    border-radius: var(--border-radius);
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=world] .settlement .item-name select option, 
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=world] .settlement .item-name select optgroup {
+    background: var(--glass-bg-dark);
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=world] .settlement .item-name .level input[type=number] {
+    color: var(--pfui-main-grey-color);
+    border: none;
+    background: none;
+    background-color: var(--color-cool-5-90);
+    box-shadow: var(--box-shadow);
+    text-shadow: 0 0 3px black;
+    border-radius: var(--border-radius);
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=world] .sidebar {
+    background: unset;
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=world] .settlement .item-summary {
+    color: var(--pfui-main-color);
+    border: none;
+    background: none;
+    background-color: var(--color-cool-5-90);
+    box-shadow: var(--box-shadow);
+    text-shadow: 0 0 3px black;
+    border-radius: var(--border-radius);
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=world] .settlement .item-summary .settlement-data input[type=number] {
+    color: var(--pfui-main-grey-color);
+    border: none;
+    background: none;
+    background-color: var(--color-cool-5-90);
+    box-shadow: var(--box-shadow);
+    text-shadow: 0 0 3px black;
+    border-radius: var(--border-radius);
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=world] aside {
+    color: var(--pfui-main-color);
+    border: none;
+    background: none;
+    background-color: var(--color-cool-5-90);
+    box-shadow: var(--box-shadow);
+    text-shadow: 0 0 3px black;
+    border-radius: var(--border-radius);
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=world] aside input[type=number] {
+    color: var(--pfui-main-grey-color);
+    border: none;
+    background: none;
+    background-color: var(--color-cool-5-90);
+    box-shadow: var(--box-shadow);
+    text-shadow: 0 0 3px black;
+    border-radius: var(--border-radius);
+}
+
+
+
+/*      Features     
+*************************/
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=features] .feat-item .item-name .feat-slot-title {
+    color: var(--green);
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=features] .feat-item .item-name h4 a:hover {
+    color: var(--green);
+    text-shadow: 0 0 3px var(--color-shadow-primary);
+}
+
+
+
+/*      Ongoing     
+*************************/
+.dark-kingdom-theme.sheet.kingdom .directory-list h4 > a:hover {
+    color: var(--green);
+    text-shadow: 0 0 3px var(--color-shadow-primary);
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=ongoing] .events .event-dc, 
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=ongoing] .events .event-dc input {
+    color: var(--color-warm-1);
+    border: none;
+    background: none;
+    background-color: var(--color-cool-5-25);
+    box-shadow: var(--box-shadow);
+    text-shadow: 0 0 3px black;
+    border-radius: var(--border-radius);
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=ongoing] .events .event-dc input {
+    color: var(--green);
+    text-align: center;
+}
+.dark-kingdom-theme.sheet.kingdom .tab.active[data-tab=ongoing] .events .event-details {
+    color: var(--pfui-main-color);
+    border: none;
+    background: none;
+    background-color: var(--color-cool-5-25);
+    box-shadow: var(--box-shadow);
+    text-shadow: 0 0 3px black;
+    border-radius: var(--border-radius);
+}
