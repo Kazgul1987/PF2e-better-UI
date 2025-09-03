@@ -2,6 +2,8 @@
 :root {
   --pf2e-primary-accent: #3C7C59;
   --pf2e-bg-light: #F8F6F1;
+  --pf2e-primary-dark: #305F47;
+  --pf2e-secondary-bg: #E0E0E0;
   --pf2e-font-family: "Noto Sans", sans-serif;
   --pf2e-font-size: 16px;
   --pf2e-line-height: 1.5;
@@ -28,4 +30,15 @@ body {
 .pf2e-tab.inactive {
   background: var(--pf2e-secondary-bg);
   color: #1C1C1C;
+}
+
+.pf2e-panel,
+.pf2e-card {
+  background: var(--pf2e-bg-light);
+  border: 1px solid var(--pf2e-secondary-bg);
+}
+
+.pf2e-panel:hover,
+.pf2e-card:hover {
+  box-shadow: 0 0 4px rgba(60,124,89,0.15);
 }
