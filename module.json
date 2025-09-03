@@ -21,6 +21,7 @@
     "styles/remaster.css"
   ],
   "scripts": [
-    "scripts/condition-badges.js"
+    "scripts/condition-badges.js",
+    "scripts/remaster-sheet.js"
   ]
 }
