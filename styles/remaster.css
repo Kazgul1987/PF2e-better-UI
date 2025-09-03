@@ -1,8 +1,11 @@
 /* PF2e Remaster Green Theme */
 
-:root {
-  --pf2e-color-primary: #3C7C59;
-  --pf2e-color-primary-dark: #305F47;
+:root,
+.app,
+.themed.theme-light {
+  --color-pf-primary: #3C7C59;
+  --color-pf-primary-dark: #305F47;
+  --color-pf-secondary: #3C9D63;
   --pf2e-bg-light: #F8F6F1;
   --pf2e-bg-dark: #E0E0E0;
   --pf2e-text-color: #1C1C1C;
@@ -19,59 +22,65 @@ body {
   color: var(--pf2e-text-color);
 }
 
-.pf2e-button,
-.pf2e-tab {
-  background: var(--pf2e-color-primary);
-  color: #FFFFFF;
+.pf2e.actor .sheet-header {
+  background-color: var(--color-pf-primary);
+  color: var(--text-light);
+  padding: 0.5rem;
 }
 
-.pf2e-button:hover,
-.pf2e-tab:hover {
-  background: var(--pf2e-color-primary-dark);
+.pf2e button,
+.pf2e .tab {
+  background: var(--color-pf-primary);
+  color: var(--text-light);
 }
 
-.pf2e-tab.inactive {
+.pf2e button:hover,
+.pf2e .tab:hover {
+  background: var(--color-pf-primary-dark);
+}
+
+.pf2e .tab.inactive {
   background: var(--pf2e-bg-dark);
   color: var(--pf2e-text-color);
 }
 
-.pf2e-panel,
-.pf2e-card {
+.pf2e .panel,
+.pf2e .card {
   background: var(--pf2e-bg-light);
   border: 1px solid var(--pf2e-bg-dark);
 }
 
-.pf2e-panel:hover,
-.pf2e-card:hover {
+.pf2e .panel:hover,
+.pf2e .card:hover {
   box-shadow: 0 0 4px rgba(60,124,89,0.15);
 }
 
 /* Badge styles */
-.pf2e-badge {
+.pf2e .badge {
   color: #FFFFFF;
   border-radius: 4px;
   padding: 2px 6px;
   display: inline-block;
 }
 
-.pf2e-badge-success {
+.pf2e .badge-success {
   background: #3C9D63;
 }
 
-.pf2e-badge-danger {
+.pf2e .badge-danger {
   background: #C94F4F;
 }
 
-.pf2e-badge-warning {
+.pf2e .badge-warning {
   background: #E6A23C;
 }
 
-.pf2e-badge-info {
+.pf2e .badge-info {
   background: #4A90E2;
 }
 
 /* Actor sheet */
-.pf2e.sheet.actor {
+.pf2e.actor {
   font-family: var(--pf2e-font-family);
   font-size: var(--pf2e-font-size);
   line-height: var(--pf2e-line-height);
@@ -79,37 +88,31 @@ body {
   color: var(--pf2e-text-color);
 }
 
-.pf2e.sheet.actor .sheet-header {
-  background: var(--pf2e-color-primary);
-  color: #FFFFFF;
-  padding: 0.5rem;
-}
-
-.pf2e.sheet.actor .sheet-navigation .item {
+.pf2e.actor .sheet-navigation .item {
   background: var(--pf2e-bg-dark);
   color: var(--pf2e-text-color);
   border-radius: 4px;
   margin-right: 0.25rem;
 }
 
-.pf2e.sheet.actor .sheet-navigation .item.active,
-.pf2e.sheet.actor .sheet-navigation .item:hover {
-  background: var(--pf2e-color-primary);
-  color: #FFFFFF;
+.pf2e.actor .sheet-navigation .item.active,
+.pf2e.actor .sheet-navigation .item:hover {
+  background: var(--color-pf-primary);
+  color: var(--text-light);
 }
 
-.pf2e.sheet.actor .sheet-content button {
-  background: var(--pf2e-color-primary);
-  color: #FFFFFF;
-  border: 1px solid var(--pf2e-color-primary-dark);
+.pf2e.actor .sheet-content button {
+  background: var(--color-pf-primary);
+  color: var(--text-light);
+  border: 1px solid var(--color-pf-primary-dark);
   border-radius: 4px;
 }
 
-.pf2e.sheet.actor .sheet-content button:hover {
-  background: var(--pf2e-color-primary-dark);
+.pf2e.actor .sheet-content button:hover {
+  background: var(--color-pf-primary-dark);
 }
 
-.pf2e.sheet.actor .sheet-body section {
+.pf2e.actor .sheet-body section {
   background: var(--pf2e-bg-light);
   border: 1px solid var(--pf2e-bg-dark);
   border-radius: 4px;
@@ -117,8 +120,8 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.pf2e.sheet.actor.npc .sheet-header {
-  background: var(--pf2e-color-primary-dark);
+.pf2e.actor.npc .sheet-header {
+  background: var(--color-pf-primary-dark);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -127,39 +130,39 @@ body {
     color: #FFFFFF;
   }
 
-  .pf2e-button,
-  .pf2e-tab {
-    background: var(--pf2e-color-primary-dark);
+  .pf2e button,
+  .pf2e .tab {
+    background: var(--color-pf-primary-dark);
     color: #FFFFFF;
   }
 
-  .pf2e-button:hover,
-  .pf2e-tab:hover {
-    background: var(--pf2e-color-primary);
+  .pf2e button:hover,
+  .pf2e .tab:hover {
+    background: var(--color-pf-primary);
   }
 
-  .pf2e-tab.inactive {
+  .pf2e .tab.inactive {
     background: #555555;
     color: #FFFFFF;
   }
 
-  .pf2e-panel,
-  .pf2e-card {
+  .pf2e .panel,
+  .pf2e .card {
     background: #333333;
     border: 1px solid #444444;
   }
 
-  .pf2e-panel:hover,
-  .pf2e-card:hover {
+  .pf2e .panel:hover,
+  .pf2e .card:hover {
     box-shadow: 0 0 4px rgba(60,124,89,0.3);
   }
 
-  .pf2e.sheet.actor {
+  .pf2e.actor {
     background: #2B2B2B;
     color: #FFFFFF;
   }
 
-  .pf2e.sheet.actor .sheet-body section {
+  .pf2e.actor .sheet-body section {
     background: #333333;
     border-color: #444444;
   }
