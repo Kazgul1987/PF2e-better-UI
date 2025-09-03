@@ -1,9 +1,11 @@
 /* PF2e Remaster Green Theme */
+
 :root {
-  --pf2e-primary-accent: #3C7C59;
+  --pf2e-color-primary: #3C7C59;
+  --pf2e-color-primary-dark: #305F47;
   --pf2e-bg-light: #F8F6F1;
-  --pf2e-primary-dark: #305F47;
-  --pf2e-secondary-bg: #E0E0E0;
+  --pf2e-bg-dark: #E0E0E0;
+  --pf2e-text-color: #1C1C1C;
   --pf2e-font-family: "Noto Sans", sans-serif;
   --pf2e-font-size: 16px;
   --pf2e-line-height: 1.5;
@@ -14,28 +16,29 @@ body {
   font-size: var(--pf2e-font-size);
   line-height: var(--pf2e-line-height);
   background: var(--pf2e-bg-light);
+  color: var(--pf2e-text-color);
 }
 
 .pf2e-button,
 .pf2e-tab {
-  background: var(--pf2e-primary-accent);
+  background: var(--pf2e-color-primary);
   color: #FFFFFF;
 }
 
 .pf2e-button:hover,
 .pf2e-tab:hover {
-  background: var(--pf2e-primary-dark);
+  background: var(--pf2e-color-primary-dark);
 }
 
 .pf2e-tab.inactive {
-  background: var(--pf2e-secondary-bg);
-  color: #1C1C1C;
+  background: var(--pf2e-bg-dark);
+  color: var(--pf2e-text-color);
 }
 
 .pf2e-panel,
 .pf2e-card {
   background: var(--pf2e-bg-light);
-  border: 1px solid var(--pf2e-secondary-bg);
+  border: 1px solid var(--pf2e-bg-dark);
 }
 
 .pf2e-panel:hover,
@@ -67,6 +70,57 @@ body {
   background: #4A90E2;
 }
 
+/* Actor sheet */
+.pf2e.sheet.actor {
+  font-family: var(--pf2e-font-family);
+  font-size: var(--pf2e-font-size);
+  line-height: var(--pf2e-line-height);
+  background: var(--pf2e-bg-light);
+  color: var(--pf2e-text-color);
+}
+
+.pf2e.sheet.actor .sheet-header {
+  background: var(--pf2e-color-primary);
+  color: #FFFFFF;
+  padding: 0.5rem;
+}
+
+.pf2e.sheet.actor .sheet-navigation .item {
+  background: var(--pf2e-bg-dark);
+  color: var(--pf2e-text-color);
+  border-radius: 4px;
+  margin-right: 0.25rem;
+}
+
+.pf2e.sheet.actor .sheet-navigation .item.active,
+.pf2e.sheet.actor .sheet-navigation .item:hover {
+  background: var(--pf2e-color-primary);
+  color: #FFFFFF;
+}
+
+.pf2e.sheet.actor .sheet-content button {
+  background: var(--pf2e-color-primary);
+  color: #FFFFFF;
+  border: 1px solid var(--pf2e-color-primary-dark);
+  border-radius: 4px;
+}
+
+.pf2e.sheet.actor .sheet-content button:hover {
+  background: var(--pf2e-color-primary-dark);
+}
+
+.pf2e.sheet.actor .sheet-body section {
+  background: var(--pf2e-bg-light);
+  border: 1px solid var(--pf2e-bg-dark);
+  border-radius: 4px;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.pf2e.sheet.actor.npc .sheet-header {
+  background: var(--pf2e-color-primary-dark);
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background: #2B2B2B;
@@ -75,13 +129,13 @@ body {
 
   .pf2e-button,
   .pf2e-tab {
-    background: var(--pf2e-primary-dark);
+    background: var(--pf2e-color-primary-dark);
     color: #FFFFFF;
   }
 
   .pf2e-button:hover,
   .pf2e-tab:hover {
-    background: var(--pf2e-primary-accent);
+    background: var(--pf2e-color-primary);
   }
 
   .pf2e-tab.inactive {
@@ -98,5 +152,15 @@ body {
   .pf2e-panel:hover,
   .pf2e-card:hover {
     box-shadow: 0 0 4px rgba(60,124,89,0.3);
+  }
+
+  .pf2e.sheet.actor {
+    background: #2B2B2B;
+    color: #FFFFFF;
+  }
+
+  .pf2e.sheet.actor .sheet-body section {
+    background: #333333;
+    border-color: #444444;
   }
 }
