@@ -13,3 +13,19 @@ body {
   line-height: var(--pf2e-line-height);
   background: var(--pf2e-bg-light);
 }
+
+.pf2e-button,
+.pf2e-tab {
+  background: var(--pf2e-primary-accent);
+  color: #FFFFFF;
+}
+
+.pf2e-button:hover,
+.pf2e-tab:hover {
+  background: var(--pf2e-primary-dark);
+}
+
+.pf2e-tab.inactive {
+  background: var(--pf2e-secondary-bg);
+  color: #1C1C1C;
+}
