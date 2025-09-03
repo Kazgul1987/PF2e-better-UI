@@ -14,6 +14,13 @@ Ein grünes Remaster-Theme für das Pathfinder-2-Regelwerk in Foundry Virtual Ta
 2. Öffne oder erstelle eine Welt mit dem PF2e-System.
 3. Wähle in der Welt **Spieleinstellungen ➜ Module verwalten** und aktiviere **PF2e Better UI**.
 
+## Enabling the Remaster Character Sheet
+
+1. Open an actor and click the **Sheet** configuration button.
+2. Change the sheet type to **PF2e Remaster Character Sheet**.
+3. Ensure the sheet uses the dark theme so the styles apply (requires the `.remaster.actor.sheet.dark-theme` class).
+4. This module only supplies styling and relies on the PF2e system's sheet implementation.
+
 ## Konfiguration
 
 Das Theme kann über CSS-Variablen angepasst werden. Bearbeite dazu die Datei `styles/remaster.css` oder überschreibe die Variablen in einem eigenen Stylesheet. Siehe [Farbvariablen](#farbvariablen) für verfügbare Optionen.
