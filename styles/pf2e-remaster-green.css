@@ -42,3 +42,27 @@ body {
 .pf2e-card:hover {
   box-shadow: 0 0 4px rgba(60,124,89,0.15);
 }
+
+/* Badge styles */
+.pf2e-badge {
+  color: #FFFFFF;
+  border-radius: 4px;
+  padding: 2px 6px;
+  display: inline-block;
+}
+
+.pf2e-badge-success {
+  background: #3C9D63;
+}
+
+.pf2e-badge-danger {
+  background: #C94F4F;
+}
+
+.pf2e-badge-warning {
+  background: #E6A23C;
+}
+
+.pf2e-badge-info {
+  background: #4A90E2;
+}

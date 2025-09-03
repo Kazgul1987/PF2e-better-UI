@@ -5,5 +5,8 @@
   "version": "0.1.0",
   "styles": [
     "styles/pf2e-remaster-green.css"
+  ],
+  "scripts": [
+    "scripts/condition-badges.js"
   ]
 }
