@@ -16,7 +16,7 @@ Ein grünes Remaster-Theme für das Pathfinder-2-Regelwerk in Foundry Virtual Ta
 
 ## Konfiguration
 
-Das Theme kann über CSS-Variablen angepasst werden. Bearbeite dazu die Datei `styles/pf2e-remaster-green.css` oder überschreibe die Variablen in einem eigenen Stylesheet. Siehe [Farbvariablen](#farbvariablen) für verfügbare Optionen.
+Das Theme kann über CSS-Variablen angepasst werden. Bearbeite dazu die Datei `styles/remaster.css` oder überschreibe die Variablen in einem eigenen Stylesheet. Siehe [Farbvariablen](#farbvariablen) für verfügbare Optionen.
 
 ## Kompatibilität
 
